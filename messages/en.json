@@ -1,0 +1,277 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "getStarted": "Get Started"
+  },
+  "Hero": {
+    "badge": "AI-Powered Automation Partner",
+    "title": "Transforming workflows with AI",
+    "subtitle": "powered automation",
+    "description": "We help businesses in Vienna and the DACH region scale with professional e-commerce, custom applications, and AI-powered solutions—with up to 50% Vienna funding",
+    "exploreServices": "Explore Services",
+    "getStarted": "Get Started",
+    "trustedBy": "Trusted by"
+  },
+  "Process": {
+    "badge": "Process",
+    "title": "Your path to",
+    "titleHighlight": "excellence",
+    "subtitle": "A simple, effective approach to deliver excellence.",
+    "step1": {
+      "number": "01",
+      "title": "Discovery & Analysis",
+      "description": "We dive deep into your needs, exploring ideas and defining strategies for long-term success."
+    },
+    "step2": {
+      "number": "02",
+      "title": "Development & Test",
+      "description": "We craft tailored solutions for your goals and rigorously test them for top-notch reliability."
+    },
+    "step3": {
+      "number": "03",
+      "title": "Launch & Maintain",
+      "description": "We deploy your solution seamlessly and ensure its continued performance with ongoing care."
+    },
+    "cta": "Start Your Journey"
+  },
+  "Services": {
+    "badge": "Services",
+    "title": "Strategic solutions",
+    "titleHighlight": "for growth",
+    "subtitle": "Complete digital transformation—from e-commerce to AI automation.",
+    "learnMore": "Learn more",
+    "viewAll": "View All Services",
+    "service1": {
+      "title": "Shopify E-Commerce",
+      "description": "Professional Shopify stores with premium design, payment setup, and SEO optimization. Vienna funding eligible—up to 50% subsidized."
+    },
+    "service2": {
+      "title": "Custom Web Applications",
+      "description": "Tailored business solutions—SaaS platforms, booking systems, customer portals, and internal tools built with modern technology."
+    },
+    "service3": {
+      "title": "AI Business Automation",
+      "description": "Custom AI assistants trained on your data for customer support, document analysis, and intelligent process automation."
+    },
+    "service4": {
+      "title": "Performance Marketing",
+      "description": "Data-driven Google Ads and Meta campaigns with continuous optimization, A/B testing, and ROI tracking to maximize conversions."
+    },
+    "service5": {
+      "title": "Technical SEO",
+      "description": "Comprehensive SEO audits, local search optimization, and ongoing monitoring to increase organic visibility and drive traffic."
+    },
+    "service6": {
+      "title": "E-Commerce Optimization",
+      "description": "Ongoing Shopify optimization, conversion rate improvement, analytics tracking, and performance monitoring for sustained growth."
+    }
+  },
+  "Benefits": {
+    "badge": "Benefits",
+    "title": "Maximize efficiency",
+    "titleHighlight": "and impact",
+    "subtitle": "Discover the key benefits of partnering with us.",
+    "benefit1": {
+      "title": "Cost Reduction",
+      "description": "Optimize business processes and streamline operations to significantly minimize costs and maximize overall efficiency.",
+      "stat": "40%",
+      "statLabel": "Average cost savings"
+    },
+    "benefit2": {
+      "title": "Improved Outcomes",
+      "description": "Leverage powerful data-driven insights and innovative strategies to enhance business performance and achieve superior outcomes.",
+      "stat": "3x",
+      "statLabel": "Performance improvement"
+    },
+    "benefit3": {
+      "title": "Increased Productivity",
+      "description": "Enhance group performance and output by automating redundant tasks, refining processes, and speeding up business functions.",
+      "stat": "60%",
+      "statLabel": "Time saved on tasks"
+    },
+    "stats": {
+      "projects": "Projects Completed",
+      "satisfaction": "Client Satisfaction",
+      "team": "Team Members",
+      "experience": "Years Experience"
+    }
+  },
+  "Pricing": {
+    "badge": "Pricing",
+    "title": "Flexible plans",
+    "titleHighlight": "for growth",
+    "subtitle": "Choose the perfect plan for your business needs.",
+    "popular": "Most Popular",
+    "perMonth": "month",
+    "getStarted": "Get Started",
+    "starter": {
+      "name": "Starter",
+      "price": "€450",
+      "description": "Perfect for small businesses getting started with automation.",
+      "feature1": "AI Chatbot integration",
+      "feature2": "Basic analytics dashboard",
+      "feature3": "Email support",
+      "feature4": "1 user account",
+      "feature5": "5 automation workflows"
+    },
+    "professional": {
+      "name": "Professional",
+      "price": "€950",
+      "description": "Ideal for growing businesses and teams seeking advanced capabilities.",
+      "feature1": "Everything in Starter",
+      "feature2": "Advanced AI automation",
+      "feature3": "Custom integrations",
+      "feature4": "Priority support",
+      "feature5": "Up to 5 user accounts"
+    },
+    "business": {
+      "name": "Business",
+      "price": "€1,850",
+      "description": "Comprehensive solution for established businesses and larger teams.",
+      "feature1": "Everything in Professional",
+      "feature2": "Dedicated account manager",
+      "feature3": "Advanced analytics & reporting",
+      "feature4": "Custom AI model training",
+      "feature5": "Up to 20 user accounts"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Custom",
+      "description": "Enterprise-grade solutions tailored to your unique needs.",
+      "feature1": "Everything in Business",
+      "feature2": "White-label solutions",
+      "feature3": "On-premise deployment",
+      "feature4": "SLA guarantees",
+      "feature5": "Unlimited users"
+    },
+    "note": "All plans include a 14-day free trial. Need a custom solution?",
+    "contactUs": "Contact us"
+  },
+  "Testimonials": {
+    "badge": "Testimonials",
+    "title": "Trusted by",
+    "titleHighlight": "satisfied clients",
+    "subtitle": "Discover how we've driven growth and innovation.",
+    "socialProof": {
+      "clients": "Happy Clients",
+      "rating": "Average Rating",
+      "satisfaction": "Satisfaction Rate"
+    },
+    "testimonial1": {
+      "content": "They transformed our retail business with a professional Shopify store that increased our online sales by 250% in the first quarter."
+    },
+    "testimonial2": {
+      "content": "The custom booking system they built streamlined our entire operation. We now handle 3x more appointments with the same staff."
+    },
+    "testimonial3": {
+      "content": "Their AI chatbot handles 80% of customer inquiries automatically, freeing our team to focus on complex cases and improving satisfaction."
+    },
+    "testimonial4": {
+      "content": "The Vienna funding guidance was invaluable—we got 50% of our €15,000 project subsidized. Exceptional service and ROI."
+    }
+  },
+  "FAQ": {
+    "badge": "FAQs",
+    "title": "Ask whatever you have",
+    "titleHighlight": "in your mind",
+    "subtitle": "FAQs designed to provide the information you need.",
+    "stillHaveQuestions": "Still have questions?",
+    "stillHaveQuestionsText": "Our team is here to help. Get in touch and we'll answer all your questions.",
+    "contactUs": "Contact Us",
+    "questions": {
+      "q1": {
+        "question": "What services do you offer?",
+        "answer": "We specialize in Shopify e-commerce development, custom web applications, AI-powered business solutions, performance marketing, technical SEO, and ongoing optimization services for businesses in Vienna and the DACH region."
+      },
+      "q2": {
+        "question": "How long does a typical project take?",
+        "answer": "A Shopify e-commerce setup typically takes 4-6 weeks, custom web applications range from 8-16 weeks, and AI solutions take 6-12 weeks depending on complexity. We provide detailed timelines during our discovery phase."
+      },
+      "q3": {
+        "question": "Do you offer ongoing support after launch?",
+        "answer": "Absolutely! We provide comprehensive monthly packages for SEO, performance marketing, e-commerce optimization, and AI model management to ensure your solution continues delivering results."
+      },
+      "q4": {
+        "question": "What is the Vienna funding advantage?",
+        "answer": "Vienna-based businesses can access up to 50% funding from Wirtschaftsagentur Wien for digital transformation projects over €10,000. We help you navigate the application process to maximize your funding—effectively cutting your costs in half."
+      },
+      "q5": {
+        "question": "Can you integrate with existing systems?",
+        "answer": "Yes! We specialize in integrating with CRMs, payment gateways, inventory systems, marketing tools, and third-party APIs to create seamless workflows across your business operations."
+      },
+      "q6": {
+        "question": "What makes your AI solutions different?",
+        "answer": "Our AI solutions are custom-trained on your specific business data, providing genuine competitive advantages. We offer both AWS cloud-based and on-premise deployments based on your security and regulatory requirements."
+      }
+    }
+  },
+  "ContactCTA": {
+    "title": "Let's talk about your",
+    "titleHighlight": "next big move",
+    "subtitle": "Schedule a free consultation to discover how we can help you grow—and how much you can save with Vienna funding.",
+    "emailLabel": "Email us",
+    "phoneLabel": "Call us",
+    "scheduleCTA": "Schedule a Call",
+    "features": {
+      "consultation": "Free Consultation",
+      "response": "Quick Response",
+      "solutions": "Custom Solutions"
+    }
+  },
+  "Contact": {
+    "title": "Let's Build Something Great",
+    "subtitle": "Get in touch to discuss your project and discover how we can help your business grow",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "phone": "Phone",
+      "service": "Service Interested In",
+      "message": "Project Details",
+      "namePlaceholder": "John Doe",
+      "emailPlaceholder": "john@company.com",
+      "companyPlaceholder": "Your Company",
+      "phonePlaceholder": "+43 123 456789",
+      "messagePlaceholder": "Tell us about your project, goals, and timeline...",
+      "selectService": "Select a service",
+      "services": {
+        "shopify": "Shopify E-Commerce",
+        "webapp": "Custom Web Application",
+        "ai": "AI Business Automation",
+        "marketing": "Performance Marketing",
+        "seo": "Technical SEO",
+        "optimization": "E-Commerce Optimization"
+      },
+      "required": "*",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "successMessage": "Thank you! We'll be in touch within 24 hours.",
+      "errorMessage": "Failed to send message. Please try again or email us directly."
+    },
+    "reachUs": "Or reach us directly:",
+    "email": "hello@codebear.at",
+    "phone": "+43 (0) XXX XXX XXX"
+  },
+  "Footer": {
+    "description": "Full-service digital partner for growth-oriented SMEs in Vienna and the DACH region. Specializing in Shopify e-commerce, custom web applications, and AI-powered solutions—with up to 50% Vienna funding available.",
+    "location": "Based in Vienna, Austria",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact",
+    "newsletter": {
+      "title": "Stay updated with our newsletter",
+      "description": "Get the latest insights, tips, and updates delivered to your inbox.",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe"
+    },
+    "rights": "All rights reserved.",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
+    }
+  }
+}

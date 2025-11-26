@@ -1,0 +1,120 @@
+/* 
+ * GPU-Accelerated Animations for Process Component
+ * These CSS animations run on the compositor thread, not the main thread
+ * Add these to your globals.css file
+ */
+
+/* Bar Chart Animations */
+@keyframes barPulse {
+  0%, 100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleY(0.85);
+    opacity: 0.8;
+  }
+}
+
+@keyframes textFade {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  33% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0.7;
+  }
+}
+
+/* Code Animation */
+@keyframes typeWriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes cursorBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Target/Gauge Animations */
+@keyframes gaugePulse1 {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.1;
+  }
+}
+
+@keyframes gaugePulse2 {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.2;
+  }
+}
+
+@keyframes gaugePulse3 {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.3;
+  }
+}
+
+@keyframes gaugeRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes centerPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.6;
+  }
+}
+
+@keyframes orbitRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 
+ * Performance Notes:
+ * - These animations only use 'transform' and 'opacity' (GPU-accelerated)
+ * - No layout-triggering properties (width, height, padding, margin)
+ * - Run on compositor thread, not main thread
+ * - Smooth 60fps on mobile devices
+ * - Very low CPU usage
+ */

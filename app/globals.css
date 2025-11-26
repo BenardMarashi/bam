@@ -1,0 +1,417 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #D8420E;
+  --primary-light: #D8420E;
+  --primary-dark: #B8350C;
+  --secondary: #0D2556;
+  --accent: #D8420E;
+  --background: #0D2556;
+  --foreground: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .section-container {
+    @apply w-full max-w-[1840px] mx-auto px-5 sm:px-8 lg:px-12;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #D8420E 0%, #FF6B3D 35%, #FFFFFF 100%);
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-xl bg-white/5;
+  }
+
+  .glass-border {
+    @apply border border-white/10;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: 0 0 20px var(--primary);
+    }
+    50% {
+      opacity: 0.7;
+      box-shadow: 0 0 30px var(--primary);
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .btn-primary {
+    @apply px-8 py-4 rounded-full font-semibold text-white transition-all duration-300;
+    background: linear-gradient(135deg, #D8420E 0%, #0D2556 100%);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(216, 66, 14, 0.4);
+  }
+
+  .btn-secondary {
+    @apply px-8 py-4 rounded-full font-semibold text-white transition-all duration-300;
+    @apply glass-effect glass-border;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-white/10;
+    transform: translateY(-2px);
+  }
+}
+
+.bg-grid {
+  background-image: 
+    linear-gradient(rgba(216, 66, 14, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 37, 86, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.bg-grid-small {
+  background-image: 
+    linear-gradient(rgba(13, 37, 86, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 37, 86, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(
+    to right,
+    rgba(13, 37, 86, 0.1) 0%,
+    rgba(13, 37, 86, 0.2) 50%,
+    rgba(13, 37, 86, 0.1) 100%
+  );
+  background-size: 1000px 100%;
+}
+
+.code-block {
+  @apply glass-effect glass-border rounded-2xl p-6;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 10px;
+  line-height: 1.7;
+  letter-spacing: -0.4px;
+}
+
+.code-line {
+  @apply text-white/70;
+  opacity: 0;
+  animation: fadeInCode 0.3s ease-in forwards;
+}
+
+@keyframes fadeInCode {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ========================================
+   PROCESS COMPONENT ANIMATIONS
+   GPU-accelerated for 60fps performance
+   ======================================== */
+
+/* Bar Chart Animations */
+@keyframes barPulse {
+  0%, 100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleY(0.85);
+    opacity: 0.8;
+  }
+}
+
+@keyframes textFade {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  33% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0.7;
+  }
+}
+
+/* Code Animation */
+@keyframes typeWriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes cursorBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Target/Gauge Animations */
+@keyframes gaugePulse1 {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.1;
+  }
+}
+
+@keyframes gaugePulse2 {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.2;
+  }
+}
+
+@keyframes gaugePulse3 {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.3;
+  }
+}
+
+@keyframes gaugeRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes centerPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.6;
+  }
+}
+
+@keyframes orbitRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* End Process Animations */
+
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media print {
+  body {
+    @apply bg-white text-black;
+  }
+  
+  .glass-effect,
+  .glass-border,
+  nav,
+  footer {
+    display: none;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #D8420E 0%, #0D2556 100%);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #D8420E 0%, #D8420E 100%);
+}
+
+/* ========================================
+   GLOBAL BACKGROUND ANIMATIONS
+   GPU-accelerated for smooth 60fps performance
+   ======================================== */
+
+.aura-light {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Slow, smooth floating animations for each orb */
+@keyframes floatOrb1 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(30px, -40px, 0) scale(1.05);
+  }
+  66% {
+    transform: translate3d(-20px, 20px, 0) scale(0.98);
+  }
+}
+
+@keyframes floatOrb2 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  25% {
+    transform: translate3d(-25px, 35px, 0) scale(1.08);
+  }
+  50% {
+    transform: translate3d(30px, -25px, 0) scale(0.95);
+  }
+  75% {
+    transform: translate3d(-15px, -30px, 0) scale(1.03);
+  }
+}
+
+@keyframes floatOrb3 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  40% {
+    transform: translate3d(-35px, 25px, 0) scale(1.06);
+  }
+  80% {
+    transform: translate3d(25px, -30px, 0) scale(0.97);
+  }
+}
+
+@keyframes floatOrb4 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  30% {
+    transform: translate3d(40px, -20px, 0) scale(1.04);
+  }
+  60% {
+    transform: translate3d(-30px, 30px, 0) scale(0.96);
+  }
+}
+
+@keyframes floatOrb5 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  35% {
+    transform: translate3d(-20px, -35px, 0) scale(1.07);
+  }
+  70% {
+    transform: translate3d(35px, 20px, 0) scale(0.98);
+  }
+}
+
+/* Transparent sections with subtle overlays */
+.section-overlay-subtle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top, rgba(216, 66, 14, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}

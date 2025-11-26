@@ -1,0 +1,277 @@
+{
+  "Navigation": {
+    "home": "Startseite",
+    "services": "Leistungen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "getStarted": "Jetzt starten"
+  },
+  "Hero": {
+    "badge": "KI-gestützte Automatisierungspartner",
+    "title": "Workflows mit KI transformieren",
+    "subtitle": "durch intelligente Automatisierung",
+    "description": "Wir helfen Unternehmen in Wien und der DACH-Region mit professionellem E-Commerce, maßgeschneiderten Anwendungen und KI-Lösungen—mit bis zu 50% Wiener Förderung",
+    "exploreServices": "Leistungen entdecken",
+    "getStarted": "Jetzt starten",
+    "trustedBy": "Vertraut von"
+  },
+  "Process": {
+    "badge": "Prozess",
+    "title": "Ihr Weg zur",
+    "titleHighlight": "Exzellenz",
+    "subtitle": "Ein einfacher, effektiver Ansatz für hervorragende Ergebnisse.",
+    "step1": {
+      "number": "01",
+      "title": "Analyse & Strategie",
+      "description": "Wir tauchen tief in Ihre Bedürfnisse ein, erforschen Ideen und definieren Strategien für langfristigen Erfolg."
+    },
+    "step2": {
+      "number": "02",
+      "title": "Entwicklung & Test",
+      "description": "Wir entwickeln maßgeschneiderte Lösungen für Ihre Ziele und testen diese rigoros für höchste Zuverlässigkeit."
+    },
+    "step3": {
+      "number": "03",
+      "title": "Launch & Wartung",
+      "description": "Wir setzen Ihre Lösung nahtlos um und gewährleisten deren kontinuierliche Performance durch laufende Betreuung."
+    },
+    "cta": "Starten Sie Ihre Reise"
+  },
+  "Services": {
+    "badge": "Leistungen",
+    "title": "Strategische Lösungen",
+    "titleHighlight": "für Wachstum",
+    "subtitle": "Komplette digitale Transformation—von E-Commerce bis KI-Automatisierung.",
+    "learnMore": "Mehr erfahren",
+    "viewAll": "Alle Leistungen ansehen",
+    "service1": {
+      "title": "Shopify E-Commerce",
+      "description": "Professionelle Shopify-Shops mit Premium-Design, Zahlungseinrichtung und SEO-Optimierung. Wiener Förderung möglich—bis zu 50% bezuschusst."
+    },
+    "service2": {
+      "title": "Custom Web-Anwendungen",
+      "description": "Maßgeschneiderte Business-Lösungen—SaaS-Plattformen, Buchungssysteme, Kundenportale und interne Tools mit modernster Technologie."
+    },
+    "service3": {
+      "title": "KI Business Automation",
+      "description": "Individuelle KI-Assistenten, trainiert auf Ihren Daten, für Kundensupport, Dokumentenanalyse und intelligente Prozessautomatisierung."
+    },
+    "service4": {
+      "title": "Performance Marketing",
+      "description": "Datengetriebene Google Ads und Meta Kampagnen mit kontinuierlicher Optimierung, A/B-Testing und ROI-Tracking zur Maximierung der Conversions."
+    },
+    "service5": {
+      "title": "Technical SEO",
+      "description": "Umfassende SEO-Audits, lokale Suchoptimierung und laufendes Monitoring zur Steigerung der organischen Sichtbarkeit und Traffic-Generierung."
+    },
+    "service6": {
+      "title": "E-Commerce Optimierung",
+      "description": "Laufende Shopify-Optimierung, Conversion-Rate-Verbesserung, Analytics-Tracking und Performance-Monitoring für nachhaltiges Wachstum."
+    }
+  },
+  "Benefits": {
+    "badge": "Vorteile",
+    "title": "Effizienz maximieren",
+    "titleHighlight": "und Wirkung erzielen",
+    "subtitle": "Entdecken Sie die wichtigsten Vorteile einer Partnerschaft mit uns.",
+    "benefit1": {
+      "title": "Kostenreduzierung",
+      "description": "Optimieren Sie Geschäftsprozesse und rationalisieren Sie Abläufe, um Kosten erheblich zu minimieren und die Gesamteffizienz zu maximieren.",
+      "stat": "40%",
+      "statLabel": "Durchschnittliche Kosteneinsparung"
+    },
+    "benefit2": {
+      "title": "Verbesserte Ergebnisse",
+      "description": "Nutzen Sie leistungsstarke datengestützte Erkenntnisse und innovative Strategien, um die Geschäftsleistung zu verbessern.",
+      "stat": "3x",
+      "statLabel": "Leistungsverbesserung"
+    },
+    "benefit3": {
+      "title": "Gesteigerte Produktivität",
+      "description": "Verbessern Sie die Teamleistung durch Automatisierung redundanter Aufgaben, Prozessoptimierung und Beschleunigung von Geschäftsfunktionen.",
+      "stat": "60%",
+      "statLabel": "Zeitersparnis bei Aufgaben"
+    },
+    "stats": {
+      "projects": "Abgeschlossene Projekte",
+      "satisfaction": "Kundenzufriedenheit",
+      "team": "Teammitglieder",
+      "experience": "Jahre Erfahrung"
+    }
+  },
+  "Pricing": {
+    "badge": "Preise",
+    "title": "Flexible Pläne",
+    "titleHighlight": "für Wachstum",
+    "subtitle": "Wählen Sie den perfekten Plan für Ihre Geschäftsbedürfnisse.",
+    "popular": "Am beliebtesten",
+    "perMonth": "Monat",
+    "getStarted": "Jetzt starten",
+    "starter": {
+      "name": "Starter",
+      "price": "€450",
+      "description": "Perfekt für kleine Unternehmen, die mit Automatisierung beginnen.",
+      "feature1": "KI-Chatbot Integration",
+      "feature2": "Basis-Analytics Dashboard",
+      "feature3": "E-Mail Support",
+      "feature4": "1 Benutzerkonto",
+      "feature5": "5 Automatisierungs-Workflows"
+    },
+    "professional": {
+      "name": "Professional",
+      "price": "€950",
+      "description": "Ideal für wachsende Unternehmen mit erweiterten Anforderungen.",
+      "feature1": "Alles aus Starter",
+      "feature2": "Erweiterte KI-Automatisierung",
+      "feature3": "Individuelle Integrationen",
+      "feature4": "Prioritäts-Support",
+      "feature5": "Bis zu 5 Benutzerkonten"
+    },
+    "business": {
+      "name": "Business",
+      "price": "€1.850",
+      "description": "Umfassende Lösung für etablierte Unternehmen und größere Teams.",
+      "feature1": "Alles aus Professional",
+      "feature2": "Dedizierter Account Manager",
+      "feature3": "Erweiterte Analytics & Reporting",
+      "feature4": "Individuelles KI-Modell-Training",
+      "feature5": "Bis zu 20 Benutzerkonten"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Individuell",
+      "description": "Unternehmenslösungen, maßgeschneidert auf Ihre Bedürfnisse.",
+      "feature1": "Alles aus Business",
+      "feature2": "White-Label Lösungen",
+      "feature3": "On-Premise Deployment",
+      "feature4": "SLA Garantien",
+      "feature5": "Unbegrenzte Benutzer"
+    },
+    "note": "Alle Pläne beinhalten eine 14-tägige kostenlose Testphase. Benötigen Sie eine individuelle Lösung?",
+    "contactUs": "Kontaktieren Sie uns"
+  },
+  "Testimonials": {
+    "badge": "Referenzen",
+    "title": "Vertraut von",
+    "titleHighlight": "zufriedenen Kunden",
+    "subtitle": "Entdecken Sie, wie wir Wachstum und Innovation vorantreiben.",
+    "socialProof": {
+      "clients": "Zufriedene Kunden",
+      "rating": "Durchschnittsbewertung",
+      "satisfaction": "Zufriedenheitsrate"
+    },
+    "testimonial1": {
+      "content": "Sie haben unser Einzelhandelsgeschäft mit einem professionellen Shopify-Shop transformiert, der unsere Online-Verkäufe im ersten Quartal um 250% steigerte."
+    },
+    "testimonial2": {
+      "content": "Das maßgeschneiderte Buchungssystem hat unseren gesamten Betrieb optimiert. Wir bearbeiten jetzt 3x mehr Termine mit demselben Personal."
+    },
+    "testimonial3": {
+      "content": "Ihr KI-Chatbot bearbeitet 80% der Kundenanfragen automatisch, sodass unser Team sich auf komplexe Fälle konzentrieren und die Zufriedenheit verbessern kann."
+    },
+    "testimonial4": {
+      "content": "Die Beratung zur Wiener Förderung war unbezahlbar—wir erhielten 50% unseres €15.000-Projekts als Zuschuss. Außergewöhnlicher Service und ROI."
+    }
+  },
+  "FAQ": {
+    "badge": "FAQs",
+    "title": "Fragen Sie was Sie",
+    "titleHighlight": "wissen möchten",
+    "subtitle": "FAQs, die Ihnen die benötigten Informationen bieten.",
+    "stillHaveQuestions": "Noch Fragen?",
+    "stillHaveQuestionsText": "Unser Team ist hier, um zu helfen. Nehmen Sie Kontakt auf und wir beantworten alle Ihre Fragen.",
+    "contactUs": "Kontaktieren Sie uns",
+    "questions": {
+      "q1": {
+        "question": "Welche Dienstleistungen bieten Sie an?",
+        "answer": "Wir spezialisieren uns auf Shopify E-Commerce-Entwicklung, maßgeschneiderte Webanwendungen, KI-gestützte Geschäftslösungen, Performance Marketing, Technical SEO und laufende Optimierungsdienste für Unternehmen in Wien und der DACH-Region."
+      },
+      "q2": {
+        "question": "Wie lange dauert ein typisches Projekt?",
+        "answer": "Ein Shopify E-Commerce-Setup dauert typischerweise 4-6 Wochen, maßgeschneiderte Webanwendungen 8-16 Wochen und KI-Lösungen 6-12 Wochen je nach Komplexität. Wir erstellen detaillierte Zeitpläne während unserer Discovery-Phase."
+      },
+      "q3": {
+        "question": "Bieten Sie nach dem Launch fortlaufenden Support an?",
+        "answer": "Absolut! Wir bieten umfassende monatliche Pakete für SEO, Performance Marketing, E-Commerce-Optimierung und KI-Modell-Management, um sicherzustellen, dass Ihre Lösung weiterhin Ergebnisse liefert."
+      },
+      "q4": {
+        "question": "Was ist der Wiener Förderungsvorteil?",
+        "answer": "Wiener Unternehmen können bis zu 50% Förderung von der Wirtschaftsagentur Wien für digitale Transformationsprojekte über €10.000 erhalten. Wir helfen Ihnen beim Antragsprozess, um Ihre Förderung zu maximieren—wodurch sich Ihre Kosten effektiv halbieren."
+      },
+      "q5": {
+        "question": "Können Sie mit bestehenden Systemen integrieren?",
+        "answer": "Ja! Wir sind spezialisiert auf die Integration mit CRMs, Zahlungsgateways, Inventarsystemen, Marketing-Tools und Drittanbieter-APIs, um nahtlose Workflows in Ihren Geschäftsprozessen zu schaffen."
+      },
+      "q6": {
+        "question": "Was macht Ihre KI-Lösungen anders?",
+        "answer": "Unsere KI-Lösungen werden auf Ihre spezifischen Geschäftsdaten trainiert und bieten echte Wettbewerbsvorteile. Wir bieten sowohl AWS-Cloud-basierte als auch On-Premise-Deployments basierend auf Ihren Sicherheits- und regulatorischen Anforderungen."
+      }
+    }
+  },
+  "ContactCTA": {
+    "title": "Lassen Sie uns über Ihren",
+    "titleHighlight": "nächsten großen Schritt sprechen",
+    "subtitle": "Vereinbaren Sie eine kostenlose Beratung, um zu erfahren, wie wir Ihnen beim Wachstum helfen können—und wie viel Sie mit der Wiener Förderung sparen können.",
+    "emailLabel": "Per E-Mail",
+    "phoneLabel": "Anrufen",
+    "scheduleCTA": "Termin vereinbaren",
+    "features": {
+      "consultation": "Kostenlose Beratung",
+      "response": "Schnelle Antwort",
+      "solutions": "Individuelle Lösungen"
+    }
+  },
+  "Contact": {
+    "title": "Lassen Sie uns gemeinsam Großes schaffen",
+    "subtitle": "Kontaktieren Sie uns, um Ihr Projekt zu besprechen und zu erfahren, wie wir Ihr Unternehmen wachsen lassen können",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "company": "Unternehmen",
+      "phone": "Telefon",
+      "service": "Interesse an",
+      "message": "Projektdetails",
+      "namePlaceholder": "Max Mustermann",
+      "emailPlaceholder": "max@unternehmen.at",
+      "companyPlaceholder": "Ihr Unternehmen",
+      "phonePlaceholder": "+43 123 456789",
+      "messagePlaceholder": "Erzählen Sie uns von Ihrem Projekt, Zielen und Zeitplan...",
+      "selectService": "Wählen Sie eine Leistung",
+      "services": {
+        "shopify": "Shopify E-Commerce",
+        "webapp": "Maßgeschneiderte Web-Anwendung",
+        "ai": "KI Business Automation",
+        "marketing": "Performance Marketing",
+        "seo": "Technical SEO",
+        "optimization": "E-Commerce Optimierung"
+      },
+      "required": "*",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "successMessage": "Vielen Dank! Wir melden uns innerhalb von 24 Stunden.",
+      "errorMessage": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per E-Mail."
+    },
+    "reachUs": "Oder kontaktieren Sie uns direkt:",
+    "email": "hallo@codebear.at",
+    "phone": "+43 (0) XXX XXX XXX"
+  },
+  "Footer": {
+    "description": "Full-Service Digitaler Partner für wachstumsorientierte KMUs in Wien und der DACH-Region. Spezialisiert auf Shopify E-Commerce, maßgeschneiderte Web-Anwendungen und KI-gestützte Lösungen—mit bis zu 50% Wiener Förderung verfügbar.",
+    "location": "Mit Sitz in Wien, Österreich",
+    "quickLinks": "Schnellzugriff",
+    "services": "Leistungen",
+    "contact": "Kontakt",
+    "newsletter": {
+      "title": "Bleiben Sie mit unserem Newsletter auf dem Laufenden",
+      "description": "Erhalten Sie die neuesten Erkenntnisse, Tipps und Updates direkt in Ihr Postfach.",
+      "placeholder": "Geben Sie Ihre E-Mail ein",
+      "subscribe": "Abonnieren"
+    },
+    "rights": "Alle Rechte vorbehalten.",
+    "legal": {
+      "privacy": "Datenschutz",
+      "terms": "Nutzungsbedingungen",
+      "cookies": "Cookie-Richtlinie"
+    }
+  }
+}
