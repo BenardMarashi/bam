@@ -99,7 +99,7 @@ const PricingCard = ({ plan, index, t }: { plan: PricingPlan; index: number; t: 
       className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border"
       style={{
         backgroundColor: 'rgba(255, 255, 255, 0.05)',
-        borderColor: plan.popular ? '#D8420E' : 'rgba(255, 255, 255, 0.1)'
+        borderColor: plan.popular ? '#C93C3C' : 'rgba(255, 255, 255, 0.1)'
       }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
@@ -110,9 +110,9 @@ const PricingCard = ({ plan, index, t }: { plan: PricingPlan; index: number; t: 
       {plan.popular && (
         <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20">
           <div 
-            className="px-4 py-1 rounded-full text-xs font-semibold text-white"
+            className="px-4 py-1 rounded-full text-xs font-semibold text-gray-900"
             style={{
-              background: 'linear-gradient(135deg, #D8420E 0%, #D8420E 100%)',
+              background: 'linear-gradient(135deg, #C93C3C 0%, #C93C3C 100%)',
             }}
           >
             {t('popular')}
@@ -173,7 +173,7 @@ const PricingCard = ({ plan, index, t }: { plan: PricingPlan; index: number; t: 
             <span 
               className="text-5xl font-bold"
               style={{
-                color: '#D8420E',
+                color: '#C93C3C',
                 fontFamily: "'Outfit', sans-serif"
               }}
             >
@@ -218,7 +218,7 @@ const PricingCard = ({ plan, index, t }: { plan: PricingPlan; index: number; t: 
                 <li key={idx} className="flex items-start gap-3">
                   <svg
                     className="w-5 h-5 flex-shrink-0 mt-0.5"
-                    style={{ color: '#D8420E' }}
+                    style={{ color: '#C93C3C' }}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -297,7 +297,7 @@ export default function Pricing() {
           <p 
             className="font-bold text-sm uppercase"
             style={{
-              color: '#D8420E',
+              color: '#C93C3C',
               letterSpacing: '0.2em',
               fontFamily: "'Outfit', sans-serif"
             }}
@@ -314,7 +314,7 @@ export default function Pricing() {
             }}
           >
             {t('title')} <span style={{
-              background: 'linear-gradient(135deg, #D8420E 0%, #FF8C5A 50%, #FFFFFF 100%)',
+              background: 'linear-gradient(135deg, #C93C3C 0%, #F06666 50%, #FFFFFF 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
@@ -351,8 +351,8 @@ export default function Pricing() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-16"
         >
-          <p className="text-gray-400">
-            {t('note')} <a href="#contact" className="hover:text-[#D8420E] underline transition-colors" style={{ color: '#D8420E' }}>{t('contactUs')}</a>
+          <p className="text-gray-600">
+            {t('note')} <a href="#contact" className="hover:text-[#C93C3C] underline transition-colors" style={{ color: '#C93C3C' }}>{t('contactUs')}</a>
           </p>
         </motion.div>
       </motion.div>

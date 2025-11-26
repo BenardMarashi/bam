@@ -298,7 +298,7 @@ export default function DebugPage() {
             Make sure these are added:
             <ul style={{ marginTop: '5px' }}>
               <li><code style={{ background: '#000', padding: '2px 5px' }}>
-                {typeof window !== 'undefined' ? window.location.hostname : 'codebear-seven.vercel.app'}
+                {typeof window !== 'undefined' ? window.location.hostname : 'bam-seven.vercel.app'}
               </code></li>
               <li><code style={{ background: '#000', padding: '2px 5px' }}>*.vercel.app</code></li>
             </ul>

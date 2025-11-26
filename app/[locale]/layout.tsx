@@ -11,7 +11,7 @@ import '../../components/process-animations.css';
 const outfit = Outfit({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Code Bear - AI Automation Partner',
+  title: 'BAM - AI Automation Partner',
   description: 'Transforming workflows with AI powered automation',
 };
 

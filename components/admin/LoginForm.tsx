@@ -36,11 +36,11 @@ export default function LoginForm() {
         className="w-full max-w-md glass-effect glass-border rounded-3xl p-8"
       >
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-gradient-to-br from-[#D8420E] to-[#D8420E] rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-gradient-to-br from-[#C93C3C] to-[#C93C3C] rounded-2xl flex items-center justify-center mx-auto mb-4">
             <span className="text-3xl">🐻</span>
           </div>
-          <h1 className="text-3xl font-bold text-white mb-2">Admin Login</h1>
-          <p className="text-gray-400">Sign in to access the dashboard</p>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Admin Login</h1>
+          <p className="text-gray-600">Sign in to access the dashboard</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -51,25 +51,25 @@ export default function LoginForm() {
           )}
 
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
+            <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#D8420E]"
-              placeholder="admin@codebear.at"
+              className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C93C3C]"
+              placeholder="admin@bam.at"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">Password</label>
+            <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#D8420E]"
+              className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C93C3C]"
               placeholder="••••••••"
             />
           </div>

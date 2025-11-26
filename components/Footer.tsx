@@ -42,12 +42,12 @@ export default function Footer() {
               <div className="w-12 h-12 rounded-xl glass-effect glass-border flex items-center justify-center group-hover:scale-110 transition-transform">
                 <span className="text-3xl">🐻</span>
               </div>
-              <span className="text-2xl font-bold text-white group-hover:text-indigo-300 transition-colors">
-                Code Bear
+              <span className="text-2xl font-bold text-gray-900 group-hover:text-indigo-300 transition-colors">
+                BAM
               </span>
             </Link>
 
-            <p className="text-gray-400 leading-relaxed mb-6 max-w-md">
+            <p className="text-gray-600 leading-relaxed mb-6 max-w-md">
               {t('description')}
             </p>
 
@@ -65,7 +65,7 @@ export default function Footer() {
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.9 }}
-                  className="w-12 h-12 glass-effect glass-border rounded-xl flex items-center justify-center hover:bg-[#D8420E]/10 transition-all"
+                  className="w-12 h-12 glass-effect glass-border rounded-xl flex items-center justify-center hover:bg-[#C93C3C]/10 transition-all"
                   aria-label={social.label}
                 >
                   <span className="text-xl">{social.icon}</span>
@@ -79,7 +79,7 @@ export default function Footer() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h3 className="font-semibold text-lg text-white mb-6">
+            <h3 className="font-semibold text-lg text-gray-900 mb-6">
               {t('quickLinks')}
             </h3>
             <ul className="space-y-3">
@@ -97,12 +97,12 @@ export default function Footer() {
                 >
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-[#D8420E] transition-colors inline-flex items-center group"
+                    className="text-gray-600 hover:text-[#C93C3C] transition-colors inline-flex items-center group"
                   >
                     <motion.span
                       initial={{ x: 0 }}
                       whileHover={{ x: 5 }}
-                      className="mr-2 text-[#D8420E]"
+                      className="mr-2 text-[#C93C3C]"
                     >
                       →
                     </motion.span>
@@ -118,10 +118,10 @@ export default function Footer() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="font-semibold text-lg text-white mb-4">
+            <h3 className="font-semibold text-lg text-gray-900 mb-4">
               {t('newsletter.title')}
             </h3>
-            <p className="text-gray-400 text-sm mb-6">
+            <p className="text-gray-600 text-sm mb-6">
               {t('newsletter.description')}
             </p>
             <form onSubmit={handleNewsletterSubmit} className="space-y-3">
@@ -130,7 +130,7 @@ export default function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t('newsletter.placeholder')}
-                className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#D8420E] transition-all text-sm"
+                className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C93C3C] transition-all text-sm"
                 required
               />
               <motion.button
@@ -154,7 +154,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex flex-col md:flex-row items-center gap-4">
               <p className="text-gray-500 text-sm">
-                © {new Date().getFullYear()} Code Bear. {t('rights')}
+                © {new Date().getFullYear()} BAM. {t('rights')}
               </p>
               
               {/* Language Switcher in Footer */}
@@ -165,13 +165,13 @@ export default function Footer() {
             </div>
 
             <div className="flex gap-6 text-sm">
-              <Link href="/privacy" className="text-gray-500 hover:text-[#D8420E] transition-colors">
+              <Link href="/privacy" className="text-gray-500 hover:text-[#C93C3C] transition-colors">
                 {t('legal.privacy')}
               </Link>
-              <Link href="/terms" className="text-gray-500 hover:text-[#D8420E] transition-colors">
+              <Link href="/terms" className="text-gray-500 hover:text-[#C93C3C] transition-colors">
                 {t('legal.terms')}
               </Link>
-              <Link href="/cookies" className="text-gray-500 hover:text-[#D8420E] transition-colors">
+              <Link href="/cookies" className="text-gray-500 hover:text-[#C93C3C] transition-colors">
                 {t('legal.cookies')}
               </Link>
             </div>

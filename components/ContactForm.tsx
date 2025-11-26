@@ -108,13 +108,13 @@ export default function ContactForm() {
   id="contact" 
   className="relative py-32 overflow-hidden"
   style={{ 
-    background: 'linear-gradient(180deg, #081b3d 0%, #0D2556 100%)'
+    background: 'linear-gradient(180deg, #F8F8F8 0%, #FFFFFF 100%)'
   }}
 >
   <div className="absolute inset-0 bg-grid-small opacity-20" />
 
-  <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-[#D8420E]/10 rounded-full blur-[150px]" />
-  <div className="absolute bottom-0 right-1/4 w-[800px] h-[800px] bg-[#D8420E]/10 rounded-full blur-[150px]" />
+  <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-[#C93C3C]/10 rounded-full blur-[150px]" />
+  <div className="absolute bottom-0 right-1/4 w-[800px] h-[800px] bg-[#C93C3C]/10 rounded-full blur-[150px]" />
 
       <div className="relative z-10 section-container">
         <motion.div
@@ -123,10 +123,10 @@ export default function ContactForm() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             {t('title')}
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
         </motion.div>
@@ -141,8 +141,8 @@ export default function ContactForm() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                    {t('form.name')} <span className="text-[#D8420E]">{t('form.required')}</span>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    {t('form.name')} <span className="text-[#C93C3C]">{t('form.required')}</span>
                   </label>
                   <input
                     type="text"
@@ -153,12 +153,12 @@ export default function ContactForm() {
                     onChange={handleChange}
                     placeholder={t('form.namePlaceholder')}
                     disabled={status === 'sending'}
-                    className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#D8420E] transition-all disabled:opacity-50"
+                    className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C93C3C] transition-all disabled:opacity-50"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    {t('form.email')} <span className="text-[#D8420E]">{t('form.required')}</span>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    {t('form.email')} <span className="text-[#C93C3C]">{t('form.required')}</span>
                   </label>
                   <input
                     type="email"
@@ -169,14 +169,14 @@ export default function ContactForm() {
                     onChange={handleChange}
                     placeholder={t('form.emailPlaceholder')}
                     disabled={status === 'sending'}
-                    className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#D8420E] transition-all disabled:opacity-50"
+                    className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C93C3C] transition-all disabled:opacity-50"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                     {t('form.company')}
                   </label>
                   <input
@@ -187,11 +187,11 @@ export default function ContactForm() {
                     onChange={handleChange}
                     placeholder={t('form.companyPlaceholder')}
                     disabled={status === 'sending'}
-                    className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#D8420E] transition-all disabled:opacity-50"
+                    className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C93C3C] transition-all disabled:opacity-50"
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                     {t('form.phone')}
                   </label>
                   <input
@@ -202,13 +202,13 @@ export default function ContactForm() {
                     onChange={handleChange}
                     placeholder={t('form.phonePlaceholder')}
                     disabled={status === 'sending'}
-                    className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#D8420E] transition-all disabled:opacity-50"
+                    className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C93C3C] transition-all disabled:opacity-50"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                   {t('form.service')}
                 </label>
                 <select
@@ -217,7 +217,7 @@ export default function ContactForm() {
                   value={formData.service}
                   onChange={handleChange}
                   disabled={status === 'sending'}
-                  className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-[#D8420E] transition-all bg-transparent disabled:opacity-50"
+                  className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#C93C3C] transition-all bg-transparent disabled:opacity-50"
                 >
                   <option value="" className="bg-black">{t('form.selectService')}</option>
                   <option value="shopify" className="bg-black">{t('form.services.shopify')}</option>
@@ -230,8 +230,8 @@ export default function ContactForm() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                  {t('form.message')} <span className="text-[#D8420E]">{t('form.required')}</span>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  {t('form.message')} <span className="text-[#C93C3C]">{t('form.required')}</span>
                 </label>
                 <textarea
                   id="message"
@@ -242,7 +242,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                   placeholder={t('form.messagePlaceholder')}
                   disabled={status === 'sending'}
-                  className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#D8420E] transition-all resize-none disabled:opacity-50"
+                  className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C93C3C] transition-all resize-none disabled:opacity-50"
                 />
               </div>
 
@@ -251,7 +251,7 @@ export default function ContactForm() {
                 disabled={status === 'sending'}
                 whileHover={{ scale: status === 'sending' ? 1 : 1.02 }}
                 whileTap={{ scale: status === 'sending' ? 1 : 0.98 }}
-                className="w-full btn-primary py-4 text-lg shadow-2xl shadow-[#D8420E]/30 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full btn-primary py-4 text-lg shadow-2xl shadow-[#C93C3C]/30 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {status === 'sending' && (
                   <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -293,12 +293,12 @@ export default function ContactForm() {
             </form>
 
             <div className="mt-12 pt-8 border-t border-white/10">
-              <p className="text-gray-400 text-center mb-4">{t('reachUs')}</p>
+              <p className="text-gray-600 text-center mb-4">{t('reachUs')}</p>
               <div className="flex flex-col sm:flex-row justify-center gap-6 text-center">
-                <a href="mailto:hello@codebear.at" className="text-[#D8420E] hover:text-[#D8420E] transition-colors">
+                <a href="mailto:hello@bam.at" className="text-[#C93C3C] hover:text-[#C93C3C] transition-colors">
                   {t('email')}
                 </a>
-                <a href="tel:+43XXXXXXXXX" className="text-[#D8420E] hover:text-[#D8420E] transition-colors">
+                <a href="tel:+43XXXXXXXXX" className="text-[#C93C3C] hover:text-[#C93C3C] transition-colors">
                   {t('phone')}
                 </a>
               </div>

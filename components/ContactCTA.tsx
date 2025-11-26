@@ -16,15 +16,15 @@ export default function ContactCTA() {
       ref={ref} 
       className="relative py-32 overflow-hidden"
       style={{ 
-        background: 'linear-gradient(180deg, #0D2556 0%, #081b3d 100%)'
+        background: 'linear-gradient(180deg, #FFFFFF 0%, #F8F8F8 100%)'
       }}
     >
       {/* Subtle grid - NO ORBS */}
       <div className="absolute inset-0 bg-grid-small opacity-10" />
       
       {/* Static decorative circles - NO animations */}
-      <div className="absolute -top-20 -left-20 w-40 h-40 border border-[#D8420E]/10 rounded-full" />
-      <div className="absolute -bottom-20 -right-20 w-40 h-40 border border-[#D8420E]/10 rounded-full" />
+      <div className="absolute -top-20 -left-20 w-40 h-40 border border-[#C93C3C]/10 rounded-full" />
+      <div className="absolute -bottom-20 -right-20 w-40 h-40 border border-[#C93C3C]/10 rounded-full" />
 
       <div className="relative z-10 section-container">
         <motion.div
@@ -34,7 +34,7 @@ export default function ContactCTA() {
           className="max-w-5xl mx-auto"
         >
           <div className="glass-effect glass-border rounded-[40px] p-12 lg:p-16 text-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#D8420E]/5 to-[#D8420E]/5" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#C93C3C]/5 to-[#C93C3C]/5" />
 
             <motion.div
               animate={{
@@ -45,7 +45,7 @@ export default function ContactCTA() {
                 repeat: Infinity,
                 ease: "linear",
               }}
-              className="absolute -top-20 -left-20 w-40 h-40 border border-[#D8420E]/20 rounded-full"
+              className="absolute -top-20 -left-20 w-40 h-40 border border-[#C93C3C]/20 rounded-full"
             />
             <motion.div
               animate={{
@@ -56,7 +56,7 @@ export default function ContactCTA() {
                 repeat: Infinity,
                 ease: "linear",
               }}
-              className="absolute -bottom-20 -right-20 w-40 h-40 border border-[#D8420E]/20 rounded-full"
+              className="absolute -bottom-20 -right-20 w-40 h-40 border border-[#C93C3C]/20 rounded-full"
             />
 
             <div className="relative z-10">
@@ -64,7 +64,7 @@ export default function ContactCTA() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
               >
                 {t('title')}<br />
                 <span className="gradient-text">{t('titleHighlight')}</span>
@@ -74,7 +74,7 @@ export default function ContactCTA() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto"
+                className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto"
               >
                 {t('subtitle')}
               </motion.p>
@@ -86,13 +86,13 @@ export default function ContactCTA() {
                 className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
               >
                 <a
-                  href="mailto:hello@codebear.at"
+                  href="mailto:hello@bam.at"
                   className="glass-effect glass-border rounded-2xl p-6 hover:bg-white/5 transition-colors group"
                 >
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-xl glass-effect glass-border flex items-center justify-center group-hover:scale-110 transition-transform">
                       <svg
-                        className="w-6 h-6 text-[#D8420E]"
+                        className="w-6 h-6 text-[#C93C3C]"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -106,8 +106,8 @@ export default function ContactCTA() {
                       </svg>
                     </div>
                     <div className="text-left">
-                      <div className="text-sm text-gray-400">{t('emailLabel')}</div>
-                      <div className="font-semibold text-white">hello@codebear.at</div>
+                      <div className="text-sm text-gray-600">{t('emailLabel')}</div>
+                      <div className="font-semibold text-gray-900">hello@bam.at</div>
                     </div>
                   </div>
                 </a>
@@ -119,7 +119,7 @@ export default function ContactCTA() {
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-xl glass-effect glass-border flex items-center justify-center group-hover:scale-110 transition-transform">
                       <svg
-                        className="w-6 h-6 text-[#D8420E]"
+                        className="w-6 h-6 text-[#C93C3C]"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -133,8 +133,8 @@ export default function ContactCTA() {
                       </svg>
                     </div>
                     <div className="text-left">
-                      <div className="text-sm text-gray-400">{t('phoneLabel')}</div>
-                      <div className="font-semibold text-white">+43 (0) XXX XXX XXX</div>
+                      <div className="text-sm text-gray-600">{t('phoneLabel')}</div>
+                      <div className="font-semibold text-gray-900">+43 (0) XXX XXX XXX</div>
                     </div>
                   </div>
                 </a>
@@ -149,7 +149,7 @@ export default function ContactCTA() {
                   <motion.button
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.98 }}
-                    className="btn-primary text-lg px-12 py-5 shadow-2xl shadow-[#D8420E]/40"
+                    className="btn-primary text-lg px-12 py-5 shadow-2xl shadow-[#C93C3C]/40"
                   >
                     {t('scheduleCTA')}
                   </motion.button>
@@ -160,7 +160,7 @@ export default function ContactCTA() {
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.7 }}
-                className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-400"
+                className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-600"
               >
                 {[
                   { icon: '✓', text: t('features.consultation') },
@@ -168,7 +168,7 @@ export default function ContactCTA() {
                   { icon: '✓', text: t('features.solutions') },
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <span className="text-[#D8420E]">{feature.icon}</span>
+                    <span className="text-[#C93C3C]">{feature.icon}</span>
                     <span>{feature.text}</span>
                   </div>
                 ))}

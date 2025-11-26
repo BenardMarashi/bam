@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --primary: #D8420E;
-  --primary-light: #D8420E;
-  --primary-dark: #B8350C;
-  --secondary: #0D2556;
-  --accent: #D8420E;
-  --background: #0D2556;
+  --primary: #C93C3C;
+  --primary-light: #C93C3C;
+  --primary-dark: #A32E2E;
+  --secondary: #FFFFFF;
+  --accent: #C93C3C;
+  --background: #FFFFFF;
   --foreground: #FFFFFF;
 }
 
@@ -38,7 +38,7 @@ body {
 
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #D8420E 0%, #FF6B3D 35%, #FFFFFF 100%);
+    background-image: linear-gradient(135deg, #C93C3C 0%, #E85555 35%, #FFFFFF 100%);
   }
 
   .glass-effect {
@@ -69,8 +69,8 @@ body {
   }
 
   .btn-primary {
-    @apply px-8 py-4 rounded-full font-semibold text-white transition-all duration-300;
-    background: linear-gradient(135deg, #D8420E 0%, #0D2556 100%);
+    @apply px-8 py-4 rounded-full font-semibold text-gray-900 transition-all duration-300;
+    background: linear-gradient(135deg, #C93C3C 0%, #FFFFFF 100%);
   }
 
   .btn-primary:hover {
@@ -79,7 +79,7 @@ body {
   }
 
   .btn-secondary {
-    @apply px-8 py-4 rounded-full font-semibold text-white transition-all duration-300;
+    @apply px-8 py-4 rounded-full font-semibold text-gray-900 transition-all duration-300;
     @apply glass-effect glass-border;
   }
 
@@ -132,7 +132,7 @@ body {
 }
 
 .code-line {
-  @apply text-white/70;
+  @apply text-gray-900/70;
   opacity: 0;
   animation: fadeInCode 0.3s ease-in forwards;
 }
@@ -324,12 +324,12 @@ a:focus-visible {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #D8420E 0%, #0D2556 100%);
+  background: linear-gradient(135deg, #C93C3C 0%, #FFFFFF 100%);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #D8420E 0%, #D8420E 100%);
+  background: linear-gradient(135deg, #C93C3C 0%, #C93C3C 100%);
 }
 
 /* ========================================

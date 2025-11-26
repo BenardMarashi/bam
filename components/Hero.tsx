@@ -34,7 +34,7 @@ export default function Hero() {
     <section 
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        background: 'linear-gradient(180deg, #0D2556 0%, #0a2849 50%, #0D2556 100%)'
+        background: 'linear-gradient(180deg, #FFFFFF 0%, #F5F5F5 50%, #FFFFFF 100%)'
       }}
     >
       <div className="absolute inset-0">
@@ -97,11 +97,11 @@ export default function Hero() {
               }}
               className="w-2 h-2 rounded-full"
               style={{
-                background: 'linear-gradient(135deg, #D8420E 0%, #0D2556 100%)',
+                background: 'linear-gradient(135deg, #C93C3C 0%, #FFFFFF 100%)',
                 boxShadow: '0 0 10px rgba(13, 37, 86, 0.6)',
               }}
             />
-            <span className="text-sm text-gray-300 font-medium">{t('badge')}</span>
+            <span className="text-sm text-gray-700 font-medium">{t('badge')}</span>
           </div>
         </motion.div>
 
@@ -109,7 +109,7 @@ export default function Hero() {
           variants={itemVariants}
           className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold mb-6 leading-[1.1] tracking-tight"
         >
-          <span className="block text-white">{t('title')}</span>
+          <span className="block text-gray-900">{t('title')}</span>
           <span className="block mt-3">
             <span className="gradient-text">{t('subtitle')}</span>
           </span>
@@ -117,7 +117,7 @@ export default function Hero() {
 
         <motion.p
           variants={itemVariants}
-          className="text-xl sm:text-2xl lg:text-3xl text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed font-light"
+          className="text-xl sm:text-2xl lg:text-3xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed font-light"
         >
           {t('description')}
         </motion.p>
@@ -130,7 +130,7 @@ export default function Hero() {
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
-              className="btn-primary min-w-[220px] text-lg shadow-2xl shadow-[#D8420E]/30"
+              className="btn-primary min-w-[220px] text-lg shadow-2xl shadow-[#C93C3C]/30"
             >
               {t('getStarted')}
             </motion.button>

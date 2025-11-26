@@ -11,7 +11,7 @@ export default function NotFound() {
         <p className="text-xl text-gray-600 mb-8">Page not found</p>
         <Link
           href="/"
-          className="px-6 py-3 bg-gradient-to-r from-blue-600 to-[#D8420E] text-white rounded-lg font-semibold hover:shadow-lg transition-all"
+          className="px-6 py-3 bg-gradient-to-r from-blue-600 to-[#C93C3C] text-gray-900 rounded-lg font-semibold hover:shadow-lg transition-all"
         >
           {t('home')}
         </Link>

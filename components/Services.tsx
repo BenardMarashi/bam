@@ -206,7 +206,7 @@ export default function Services() {
           <p 
             className="font-bold text-sm uppercase"
             style={{
-              color: '#D8420E',
+              color: '#C93C3C',
               letterSpacing: '0.2em',
               fontFamily: "'Outfit', sans-serif"
             }}

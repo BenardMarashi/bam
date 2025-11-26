@@ -46,7 +46,7 @@ export default function ServiceCard({ serviceKey, icon, index }: ServiceCardProp
         ))}
       </ul>
       
-      <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-[#D8420E] text-white rounded-lg font-semibold hover:shadow-lg transition-all">
+      <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-[#C93C3C] text-gray-900 rounded-lg font-semibold hover:shadow-lg transition-all">
         {t('learnMore')}
       </button>
     </motion.div>

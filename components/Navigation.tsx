@@ -53,10 +53,10 @@ export default function Navigation() {
           <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
             <div className="w-7 h-7 bg-white rounded-md flex items-center justify-center">
               <div className="grid grid-cols-2 gap-[2px] w-4 h-4">
-                <div className="bg-[#D8420E] rounded-sm"></div>
-                <div className="bg-[#D8420E] rounded-sm"></div>
-                <div className="bg-[#D8420E] rounded-sm"></div>
-                <div className="bg-[#D8420E] rounded-sm"></div>
+                <div className="bg-[#C93C3C] rounded-sm"></div>
+                <div className="bg-[#C93C3C] rounded-sm"></div>
+                <div className="bg-[#C93C3C] rounded-sm"></div>
+                <div className="bg-[#C93C3C] rounded-sm"></div>
               </div>
             </div>
           </Link>
@@ -74,7 +74,7 @@ export default function Navigation() {
               >
                 <a  
                   href={link.href}
-                  className={`py-2 text-sm text-gray-300 hover:text-white transition-all duration-300 rounded-md hover:bg-white/10 ${
+                  className={`py-2 text-sm text-gray-700 hover:text-gray-900 transition-all duration-300 rounded-md hover:bg-white/10 ${
                     scrolled ? 'px-3' : 'px-6'
                   }`}
                 >
@@ -93,7 +93,7 @@ export default function Navigation() {
                 transition={{ duration: 0.3, delay: 0.5 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-4 py-2 bg-[#D8420E] border border-white/10 text-white text-sm font-medium rounded-lg hover:bg-[#0D2556] hover:shadow-lg hover:shadow-[#D8420E]/30 transition-all flex items-center gap-2"
+                className="px-4 py-2 bg-[#C93C3C] border border-white/10 text-gray-900 text-sm font-medium rounded-lg hover:bg-[#FFFFFF] hover:shadow-lg hover:shadow-[#C93C3C]/30 transition-all flex items-center gap-2"
               >
                 <svg 
                   width="20" 
@@ -119,7 +119,7 @@ export default function Navigation() {
             transition={{ duration: 0.3, delay: 0.5 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden w-10 h-10 flex items-center justify-center text-white flex-shrink-0"
+            className="md:hidden w-10 h-10 flex items-center justify-center text-gray-900 flex-shrink-0"
             aria-label="Toggle menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -146,7 +146,7 @@ export default function Navigation() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block px-4 py-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+                  className="block px-4 py-3 text-gray-600 hover:text-gray-900 hover:bg-white/5 rounded-lg transition-colors"
                 >
                   {link.label}
                 </a>

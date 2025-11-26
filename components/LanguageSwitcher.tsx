@@ -23,8 +23,8 @@ export default function LanguageSwitcher() {
         onClick={() => switchLanguage('en')}
         className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
           locale === 'en'
-            ? 'bg-gradient-to-r from-[#D8420E] to-[#D8420E] text-white'
-            : 'text-gray-400 hover:text-white'
+            ? 'bg-gradient-to-r from-[#C93C3C] to-[#C93C3C] text-gray-900'
+            : 'text-gray-600 hover:text-gray-900'
         }`}
         aria-label="Switch to English"
       >
@@ -36,8 +36,8 @@ export default function LanguageSwitcher() {
         onClick={() => switchLanguage('de')}
         className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
           locale === 'de'
-            ? 'bg-gradient-to-r from-[#D8420E] to-[#D8420E] text-white'
-            : 'text-gray-400 hover:text-white'
+            ? 'bg-gradient-to-r from-[#C93C3C] to-[#C93C3C] text-gray-900'
+            : 'text-gray-600 hover:text-gray-900'
         }`}
         aria-label="Auf Deutsch wechseln"
       >

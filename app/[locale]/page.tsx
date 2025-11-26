@@ -13,7 +13,7 @@ import StarField from '@/components/StarField';
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen" style={{ backgroundColor: '#0D2556' }}>
+    <main className="relative min-h-screen" style={{ backgroundColor: '#FFFFFF' }}>
       <StarField />
       <div className="relative z-10">
         <Navigation />

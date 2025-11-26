@@ -96,7 +96,7 @@ const BenefitCard = memo(({ benefit, index, isInView, t }: any) => {
             <div 
               className="text-6xl font-bold mb-2"
               style={{
-                background: 'linear-gradient(135deg, #D8420E 0%, #FF8C5A 50%, #FFFFFF 100%)',
+                background: 'linear-gradient(135deg, #C93C3C 0%, #F06666 50%, #FFFFFF 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -120,7 +120,7 @@ const BenefitCard = memo(({ benefit, index, isInView, t }: any) => {
           <h3 
             className="text-2xl font-bold mb-4 transition-colors"
             style={{
-              color: isHovered ? '#D8420E' : '#FFFFFF',
+              color: isHovered ? '#C93C3C' : '#FFFFFF',
               fontFamily: "'Outfit', sans-serif"
             }}
           >
@@ -196,7 +196,7 @@ export default function Benefits() {
             transition={{ duration: 0.6 }}
             className="inline-block px-5 py-2 text-sm font-bold uppercase tracking-[0.2em] mb-6 rounded-lg"
             style={{
-              color: '#D8420E',
+              color: '#C93C3C',
               fontFamily: "'Outfit', sans-serif",
               backgroundColor: 'rgba(216, 66, 14, 0.1)',
               border: '1px solid rgba(216, 66, 14, 0.2)'
@@ -214,7 +214,7 @@ export default function Benefits() {
             }}
           >
             {t('title')} <span style={{
-              background: 'linear-gradient(135deg, #D8420E 0%, #FF8C5A 50%, #FFFFFF 100%)',
+              background: 'linear-gradient(135deg, #C93C3C 0%, #F06666 50%, #FFFFFF 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
@@ -270,7 +270,7 @@ export default function Benefits() {
                 <div 
                   className="text-5xl lg:text-6xl font-bold mb-3"
                   style={{
-                    background: 'linear-gradient(135deg, #D8420E 0%, #FF8C5A 50%, #FFFFFF 100%)',
+                    background: 'linear-gradient(135deg, #C93C3C 0%, #F06666 50%, #FFFFFF 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
