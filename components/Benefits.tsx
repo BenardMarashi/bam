@@ -177,6 +177,7 @@ export default function Benefits() {
   return (
     <section 
       ref={ref} 
+      id="benefits"
       className="py-20 sm:py-24 lg:py-32 overflow-hidden"
       style={{ backgroundColor: '#FFFFFF' }}
       aria-labelledby="benefits-heading"
