@@ -56,7 +56,7 @@ export default function Navigation() {
         }`}>
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
-            <img src="/logo.png" alt="BAM" className="h-8 w-auto" />
+            <img src="/logo.png" alt="BAM" className="h-12 w-auto" />
           </Link>
 
           {/* Desktop Navigation - Center */}
