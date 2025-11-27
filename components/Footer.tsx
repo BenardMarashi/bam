@@ -39,17 +39,7 @@ export default function Footer() {
             className="lg:col-span-2"
           >
             <Link href="/" className="flex items-center gap-3 mb-6 group w-fit">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform border"
-                style={{
-                  backgroundColor: 'rgba(201, 60, 60, 0.1)',
-                  borderColor: 'rgba(201, 60, 60, 0.2)'
-                }}
-              >
-                <span className="text-3xl">🐻</span>
-              </div>
-              <span className="text-2xl font-bold transition-colors" style={{ color: '#1f2937' }}>
-                BAM
-              </span>
+              <img src="/logo.png" alt="BAM" className="h-12 w-auto group-hover:scale-110 transition-transform" />
             </Link>
 
             <p className="leading-relaxed mb-6 max-w-md" style={{ color: '#4b5563' }}>

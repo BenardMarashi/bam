@@ -338,10 +338,10 @@ export default function ContactForm() {
             <div className="mt-12 pt-8" style={{ borderTop: '1px solid rgba(201, 60, 60, 0.2)' }}>
               <p className="text-center mb-4" style={{ color: '#4b5563' }}>{t('reachUs')}</p>
               <div className="flex flex-col sm:flex-row justify-center gap-6 text-center">
-                <a href="mailto:hello@bam.at" className="transition-colors hover:opacity-80" style={{ color: '#C93C3C' }}>
+                <a href="mailto:info@bam-group.al" className="transition-colors hover:opacity-80" style={{ color: '#C93C3C' }}>
                   {t('email')}
                 </a>
-                <a href="tel:+43XXXXXXXXX" className="transition-colors hover:opacity-80" style={{ color: '#C93C3C' }}>
+                <a href="tel:+355XXXXXXXXX" className="transition-colors hover:opacity-80" style={{ color: '#C93C3C' }}>
                   {t('phone')}
                 </a>
               </div>

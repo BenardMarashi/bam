@@ -56,14 +56,7 @@ export default function Navigation() {
         }`}>
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
-            <div className="w-7 h-7 rounded-md flex items-center justify-center" style={{ backgroundColor: '#C93C3C' }}>
-              <div className="grid grid-cols-2 gap-[2px] w-4 h-4">
-                <div className="bg-white rounded-sm"></div>
-                <div className="bg-white rounded-sm"></div>
-                <div className="bg-white rounded-sm"></div>
-                <div className="bg-white rounded-sm"></div>
-              </div>
-            </div>
+            <img src="/logo.png" alt="BAM" className="h-8 w-auto" />
           </Link>
 
           {/* Desktop Navigation - Center */}
