@@ -60,8 +60,8 @@ const BenefitCard = memo(({ benefit, index, isInView, t }: any) => {
         onHoverEnd={() => setIsHovered(false)}
         className="rounded-3xl p-8 h-full relative overflow-hidden border"
         style={{
-          backgroundColor: 'rgba(255, 255, 255, 0.05)',
-          borderColor: 'rgba(255, 255, 255, 0.1)'
+          backgroundColor: 'rgba(201, 60, 60, 0.05)',
+          borderColor: 'rgba(201, 60, 60, 0.2)'
         }}
       >
         {/* Simplified hover effect - only opacity */}
@@ -69,7 +69,7 @@ const BenefitCard = memo(({ benefit, index, isInView, t }: any) => {
           <div
             className="absolute inset-0 z-0 opacity-20"
             style={{
-              background: 'radial-gradient(circle at center, rgba(13, 37, 86, 0.6) 0%, transparent 60%)',
+              background: 'radial-gradient(circle at center, rgba(201, 60, 60, 0.4) 0%, transparent 60%)',
             }}
           />
         )}
@@ -79,8 +79,8 @@ const BenefitCard = memo(({ benefit, index, isInView, t }: any) => {
           <div
             className="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-6 border"
             style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.05)',
-              borderColor: 'rgba(255, 255, 255, 0.1)'
+              backgroundColor: 'rgba(201, 60, 60, 0.1)',
+              borderColor: 'rgba(201, 60, 60, 0.2)'
             }}
           >
             <span className="text-5xl">{benefit.icon}</span>
@@ -96,10 +96,7 @@ const BenefitCard = memo(({ benefit, index, isInView, t }: any) => {
             <div 
               className="text-6xl font-bold mb-2"
               style={{
-                background: 'linear-gradient(135deg, #C93C3C 0%, #F06666 50%, #FFFFFF 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
+                color: '#C93C3C',
                 fontFamily: "'Outfit', sans-serif"
               }}
             >
@@ -108,7 +105,7 @@ const BenefitCard = memo(({ benefit, index, isInView, t }: any) => {
             <div 
               className="text-sm font-medium"
               style={{
-                color: 'rgba(255, 255, 255, 0.5)',
+                color: '#6b7280',
                 fontFamily: "'Outfit', sans-serif"
               }}
             >
@@ -120,7 +117,7 @@ const BenefitCard = memo(({ benefit, index, isInView, t }: any) => {
           <h3 
             className="text-2xl font-bold mb-4 transition-colors"
             style={{
-              color: isHovered ? '#C93C3C' : '#FFFFFF',
+              color: isHovered ? '#C93C3C' : '#1f2937',
               fontFamily: "'Outfit', sans-serif"
             }}
           >
@@ -131,7 +128,7 @@ const BenefitCard = memo(({ benefit, index, isInView, t }: any) => {
           <p 
             className="leading-relaxed font-light"
             style={{
-              color: 'rgba(255, 255, 255, 0.7)',
+              color: '#4b5563',
               fontFamily: "'Outfit', sans-serif"
             }}
           >
@@ -181,6 +178,7 @@ export default function Benefits() {
     <section 
       ref={ref} 
       className="py-20 sm:py-24 lg:py-32 overflow-hidden"
+      style={{ backgroundColor: '#FFFFFF' }}
       aria-labelledby="benefits-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -198,8 +196,8 @@ export default function Benefits() {
             style={{
               color: '#C93C3C',
               fontFamily: "'Outfit', sans-serif",
-              backgroundColor: 'rgba(216, 66, 14, 0.1)',
-              border: '1px solid rgba(216, 66, 14, 0.2)'
+              backgroundColor: 'rgba(201, 60, 60, 0.1)',
+              border: '1px solid rgba(201, 60, 60, 0.2)'
             }}
           >
             {t('badge')}
@@ -208,22 +206,17 @@ export default function Benefits() {
             id="benefits-heading"
             className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
             style={{
-              color: '#FFFFFF',
+              color: '#1f2937',
               letterSpacing: '-0.04em',
               fontFamily: "'Outfit', sans-serif"
             }}
           >
-            {t('title')} <span style={{
-              background: 'linear-gradient(135deg, #C93C3C 0%, #F06666 50%, #FFFFFF 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}>{t('titleHighlight')}</span>
+            {t('title')} <span className="gradient-text">{t('titleHighlight')}</span>
           </h2>
           <p 
             className="text-xl sm:text-2xl max-w-3xl mx-auto font-light leading-8"
             style={{
-              color: 'rgba(255, 255, 255, 0.7)',
+              color: '#4b5563',
               fontFamily: "'Outfit', sans-serif"
             }}
           >
@@ -249,8 +242,8 @@ export default function Benefits() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="rounded-3xl p-8 lg:p-12 border"
           style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.05)',
-            borderColor: 'rgba(255, 255, 255, 0.1)'
+            backgroundColor: 'rgba(201, 60, 60, 0.05)',
+            borderColor: 'rgba(201, 60, 60, 0.2)'
           }}
         >
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -270,10 +263,7 @@ export default function Benefits() {
                 <div 
                   className="text-5xl lg:text-6xl font-bold mb-3"
                   style={{
-                    background: 'linear-gradient(135deg, #C93C3C 0%, #F06666 50%, #FFFFFF 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
+                    color: '#C93C3C',
                     fontFamily: "'Outfit', sans-serif"
                   }}
                 >
@@ -282,7 +272,7 @@ export default function Benefits() {
                 <div 
                   className="text-sm lg:text-base font-medium"
                   style={{
-                    color: 'rgba(255, 255, 255, 0.5)',
+                    color: '#6b7280',
                     fontFamily: "'Outfit', sans-serif"
                   }}
                 >

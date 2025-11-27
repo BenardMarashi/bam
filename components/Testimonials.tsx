@@ -51,8 +51,8 @@ export default function Testimonials() {
   };
 
   return (
-    <section ref={ref} className="relative py-32 overflow-hidden">
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-[#C93C3C]/10 rounded-full blur-[150px]" />
+    <section ref={ref} className="relative py-32 overflow-hidden" style={{ backgroundColor: '#FFFFFF' }}>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-[#C93C3C]/10 rounded-full blur-[150px]" />
 
       <div className="relative z-10 section-container">
         <motion.div
@@ -65,14 +65,19 @@ export default function Testimonials() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.6 }}
-            className="inline-block glass-effect glass-border rounded-lg px-5 py-2 text-sm font-semibold text-[#C93C3C] mb-6 tracking-wider uppercase"
+            className="inline-block rounded-lg px-5 py-2 text-sm font-semibold mb-6 tracking-wider uppercase"
+            style={{
+              color: '#C93C3C',
+              backgroundColor: 'rgba(201, 60, 60, 0.1)',
+              border: '1px solid rgba(201, 60, 60, 0.2)'
+            }}
           >
             {t('badge')}
           </motion.span>
-          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight" style={{ color: '#1f2937' }}>
             {t('title')} <span className="gradient-text">{t('titleHighlight')}</span>
           </h2>
-          <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl sm:text-2xl max-w-3xl mx-auto" style={{ color: '#4b5563' }}>
             {t('subtitle')}
           </p>
         </motion.div>
@@ -81,7 +86,11 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="glass-effect glass-border rounded-3xl p-8 mb-16"
+          className="rounded-3xl p-8 mb-16 border"
+          style={{
+            backgroundColor: 'rgba(201, 60, 60, 0.05)',
+            borderColor: 'rgba(201, 60, 60, 0.2)'
+          }}
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {[
@@ -95,10 +104,10 @@ export default function Testimonials() {
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
               >
-                <div className="text-4xl sm:text-5xl font-bold gradient-text mb-2">
+                <div className="text-4xl sm:text-5xl font-bold mb-2" style={{ color: '#C93C3C' }}>
                   {stat.value}
                 </div>
-                <div className="text-gray-600">{stat.label}</div>
+                <div style={{ color: '#4b5563' }}>{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -112,10 +121,14 @@ export default function Testimonials() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
-              className="glass-effect glass-border rounded-3xl p-12 relative"
+              className="rounded-3xl p-12 relative border"
+              style={{
+                backgroundColor: 'rgba(201, 60, 60, 0.05)',
+                borderColor: 'rgba(201, 60, 60, 0.2)'
+              }}
             >
-              <div className="absolute top-8 left-8 text-6xl text-[#C93C3C]/20">"</div>
-              <div className="absolute bottom-8 right-8 text-6xl text-[#C93C3C]/20">"</div>
+              <div className="absolute top-8 left-8 text-6xl" style={{ color: 'rgba(201, 60, 60, 0.2)' }}>"</div>
+              <div className="absolute bottom-8 right-8 text-6xl" style={{ color: 'rgba(201, 60, 60, 0.2)' }}>"</div>
 
               <div className="relative z-10">
                 <div className="flex justify-center gap-1 mb-6">
@@ -133,19 +146,24 @@ export default function Testimonials() {
                   ))}
                 </div>
 
-                <p className="text-xl text-gray-700 leading-relaxed mb-8 text-center max-w-3xl mx-auto">
+                <p className="text-xl leading-relaxed mb-8 text-center max-w-3xl mx-auto" style={{ color: '#374151' }}>
                   {testimonials[currentIndex].content}
                 </p>
 
                 <div className="flex items-center justify-center gap-4">
-                  <div className="w-16 h-16 rounded-full glass-effect glass-border flex items-center justify-center text-3xl">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center text-3xl border"
+                    style={{
+                      backgroundColor: 'rgba(201, 60, 60, 0.1)',
+                      borderColor: 'rgba(201, 60, 60, 0.2)'
+                    }}
+                  >
                     {testimonials[currentIndex].avatar}
                   </div>
                   <div className="text-left">
-                    <div className="font-bold text-gray-900 text-lg">
+                    <div className="font-bold text-lg" style={{ color: '#1f2937' }}>
                       {testimonials[currentIndex].name}
                     </div>
-                    <div className="text-gray-600 text-sm">
+                    <div className="text-sm" style={{ color: '#6b7280' }}>
                       {testimonials[currentIndex].role}
                     </div>
                   </div>
@@ -159,7 +177,12 @@ export default function Testimonials() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={prev}
-              className="w-12 h-12 rounded-full glass-effect glass-border flex items-center justify-center text-gray-900 hover:bg-white/10 transition-colors"
+              className="w-12 h-12 rounded-full flex items-center justify-center transition-colors border"
+              style={{
+                backgroundColor: 'rgba(201, 60, 60, 0.1)',
+                borderColor: 'rgba(201, 60, 60, 0.2)',
+                color: '#C93C3C'
+              }}
               aria-label="Previous testimonial"
             >
               <svg
@@ -186,7 +209,7 @@ export default function Testimonials() {
                   className={`w-2 h-2 rounded-full transition-all ${
                     index === currentIndex
                       ? 'w-8 bg-[#C93C3C]'
-                      : 'bg-gray-600 hover:bg-gray-500'
+                      : 'bg-[#C93C3C]/30 hover:bg-[#C93C3C]/50'
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
@@ -197,7 +220,12 @@ export default function Testimonials() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={next}
-              className="w-12 h-12 rounded-full glass-effect glass-border flex items-center justify-center text-gray-900 hover:bg-white/10 transition-colors"
+              className="w-12 h-12 rounded-full flex items-center justify-center transition-colors border"
+              style={{
+                backgroundColor: 'rgba(201, 60, 60, 0.1)',
+                borderColor: 'rgba(201, 60, 60, 0.2)',
+                color: '#C93C3C'
+              }}
               aria-label="Next testimonial"
             >
               <svg

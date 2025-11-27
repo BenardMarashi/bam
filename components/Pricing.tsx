@@ -98,8 +98,8 @@ const PricingCard = ({ plan, index, t }: { plan: PricingPlan; index: number; t: 
       variants={cardVariants}
       className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border"
       style={{
-        backgroundColor: 'rgba(255, 255, 255, 0.05)',
-        borderColor: plan.popular ? '#C93C3C' : 'rgba(255, 255, 255, 0.1)'
+        backgroundColor: plan.popular ? 'rgba(201, 60, 60, 0.1)' : 'rgba(201, 60, 60, 0.05)',
+        borderColor: plan.popular ? '#C93C3C' : 'rgba(201, 60, 60, 0.2)'
       }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
@@ -110,9 +110,9 @@ const PricingCard = ({ plan, index, t }: { plan: PricingPlan; index: number; t: 
       {plan.popular && (
         <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20">
           <div 
-            className="px-4 py-1 rounded-full text-xs font-semibold text-gray-900"
+            className="px-4 py-1 rounded-full text-xs font-semibold text-white"
             style={{
-              background: 'linear-gradient(135deg, #C93C3C 0%, #C93C3C 100%)',
+              background: '#C93C3C',
             }}
           >
             {t('popular')}
@@ -130,7 +130,7 @@ const PricingCard = ({ plan, index, t }: { plan: PricingPlan; index: number; t: 
             exit={{ opacity: 0, scale: 0.5 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
             style={{
-              background: 'radial-gradient(circle at center, rgba(13, 37, 86, 0.2) 0%, transparent 60%)',
+              background: 'radial-gradient(circle at center, rgba(201, 60, 60, 0.2) 0%, transparent 60%)',
             }}
           />
         )}
@@ -142,13 +142,13 @@ const PricingCard = ({ plan, index, t }: { plan: PricingPlan; index: number; t: 
         <div className="flex justify-between items-start mb-8">
           <plan.Icon 
             className="h-8 w-8" 
-            style={{ color: 'rgba(255, 255, 255, 0.8)' }}
+            style={{ color: '#C93C3C' }}
             aria-hidden="true" 
           />
           <span 
             className="text-xl font-medium"
             style={{
-              color: 'rgba(255, 255, 255, 0.15)',
+              color: 'rgba(201, 60, 60, 0.3)',
               fontFamily: "'Outfit', sans-serif"
             }}
           >
@@ -162,7 +162,7 @@ const PricingCard = ({ plan, index, t }: { plan: PricingPlan; index: number; t: 
             id={`pricing-title-${plan.id}`} 
             className="text-2xl font-medium mb-3"
             style={{
-              color: '#FFFFFF',
+              color: '#1f2937',
               fontFamily: "'Outfit', sans-serif"
             }}
           >
@@ -179,11 +179,11 @@ const PricingCard = ({ plan, index, t }: { plan: PricingPlan; index: number; t: 
             >
               {t(plan.priceKey)}
             </span>
-            {!t(plan.priceKey).toLowerCase().includes('custom') && (
+            {!t(plan.priceKey).toLowerCase().includes('custom') && !t(plan.priceKey).toLowerCase().includes('porosi') && (
               <span 
                 className="text-base font-light"
                 style={{
-                  color: 'rgba(255, 255, 255, 0.5)',
+                  color: '#6b7280',
                   fontFamily: "'Outfit', sans-serif"
                 }}
               >
@@ -196,7 +196,7 @@ const PricingCard = ({ plan, index, t }: { plan: PricingPlan; index: number; t: 
             id={`pricing-desc-${plan.id}`} 
             className="text-base font-light"
             style={{
-              color: 'rgba(255, 255, 255, 0.7)',
+              color: '#4b5563',
               fontFamily: "'Outfit', sans-serif"
             }}
           >
@@ -233,7 +233,7 @@ const PricingCard = ({ plan, index, t }: { plan: PricingPlan; index: number; t: 
                   <span 
                     className="text-sm leading-relaxed"
                     style={{
-                      color: 'rgba(255, 255, 255, 0.7)',
+                      color: '#4b5563',
                       fontFamily: "'Outfit', sans-serif"
                     }}
                   >
@@ -250,14 +250,14 @@ const PricingCard = ({ plan, index, t }: { plan: PricingPlan; index: number; t: 
           href="#contact" 
           className="mt-auto inline-flex items-center text-sm font-medium transition-colors duration-300"
           style={{
-            color: 'rgba(255, 255, 255, 0.7)',
+            color: '#C93C3C',
             fontFamily: "'Outfit', sans-serif"
           }}
           onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => {
-            e.currentTarget.style.color = '#FFFFFF';
+            e.currentTarget.style.color = '#a33030';
           }}
           onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => {
-            e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)';
+            e.currentTarget.style.color = '#C93C3C';
           }}
           aria-label={`${t('getStarted')} ${t(plan.titleKey)}`}
         >
@@ -283,6 +283,7 @@ export default function Pricing() {
       ref={ref}
       id="plans"
       className="py-20 sm:py-24 lg:py-32"
+      style={{ backgroundColor: '#FFFFFF' }}
       aria-labelledby="pricing-heading"
     >
       <motion.div
@@ -308,22 +309,17 @@ export default function Pricing() {
             id="pricing-heading"
             className="mt-6 text-4xl font-bold sm:text-5xl lg:text-6xl"
             style={{
-              color: '#FFFFFF',
+              color: '#1f2937',
               letterSpacing: '-0.04em',
               fontFamily: "'Outfit', sans-serif"
             }}
           >
-            {t('title')} <span style={{
-              background: 'linear-gradient(135deg, #C93C3C 0%, #F06666 50%, #FFFFFF 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}>{t('titleHighlight')}</span>
+            {t('title')} <span className="gradient-text">{t('titleHighlight')}</span>
           </h2>
           <p 
             className="mx-auto mt-6 max-w-2xl text-lg font-light leading-8"
             style={{
-              color: 'rgba(255, 255, 255, 0.7)',
+              color: '#4b5563',
               fontFamily: "'Outfit', sans-serif"
             }}
           >
@@ -352,7 +348,7 @@ export default function Pricing() {
           className="text-center mt-16"
         >
           <p className="text-gray-600">
-            {t('note')} <a href="#contact" className="hover:text-[#C93C3C] underline transition-colors" style={{ color: '#C93C3C' }}>{t('contactUs')}</a>
+            {t('note')} <a href="#contact" className="hover:underline transition-colors" style={{ color: '#C93C3C' }}>{t('contactUs')}</a>
           </p>
         </motion.div>
       </motion.div>

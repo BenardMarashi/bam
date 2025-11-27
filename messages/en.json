@@ -4,7 +4,10 @@
     "services": "Services",
     "about": "About",
     "contact": "Contact",
-    "getStarted": "Get Started"
+    "getStarted": "Get Started",
+    "process": "Process",
+    "benefits": "Benefits",
+    "plans": "Plans"
   },
   "Hero": {
     "badge": "AI-Powered Automation Partner",

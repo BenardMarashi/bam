@@ -6,21 +6,21 @@ import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 
-// MacOS Window Component - Optimized
+// MacOS Window Component - Optimized with red tint
 const MacWindow = memo(({ children, className = '' }: { children: React.ReactNode, className?: string }) => (
   <div className={`relative rounded-lg overflow-hidden border ${className}`}
     style={{
-      backgroundColor: 'rgba(255, 255, 255, 0.05)',
+      backgroundColor: 'rgba(201, 60, 60, 0.08)',
       backdropFilter: 'blur(12px)',
-      borderColor: 'rgba(255, 255, 255, 0.1)'
+      borderColor: 'rgba(201, 60, 60, 0.2)'
     }}
   >
     <div className="h-6 flex items-center px-2.5 gap-1.5"
-      style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
+      style={{ backgroundColor: 'rgba(201, 60, 60, 0.15)' }}
     >
-      <div className="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
-      <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div>
-      <div className="w-2.5 h-2.5 rounded-full bg-green-500/50"></div>
+      <div className="w-2.5 h-2.5 rounded-full bg-red-500/70"></div>
+      <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/70"></div>
+      <div className="w-2.5 h-2.5 rounded-full bg-green-500/70"></div>
     </div>
     <div className="p-4">
       {children}
@@ -33,10 +33,10 @@ MacWindow.displayName = 'MacWindow';
 // Optimized Bar Chart - CSS animations for GPU acceleration
 const AnimatedBarChart = memo(() => {
   const bars = [
-    { height: 75, color: 'bg-[#C93C3C]/70', delay: 0 },
-    { height: 45, color: 'bg-[#FFFFFF]/60', delay: 0.15 },
-    { height: 85, color: 'bg-[#FFFFFF]/70', delay: 0.3 },
-    { height: 55, color: 'bg-[#FFFFFF]/60', delay: 0.45 },
+    { height: 75, color: 'bg-[#C93C3C]', delay: 0 },
+    { height: 45, color: 'bg-[#C93C3C]/70', delay: 0.15 },
+    { height: 85, color: 'bg-[#C93C3C]/90', delay: 0.3 },
+    { height: 55, color: 'bg-[#C93C3C]/60', delay: 0.45 },
   ];
 
   return (
@@ -79,10 +79,8 @@ const AnimatedBarChart = memo(() => {
               delay: i * 0.15,
               ease: "easeOut"
             }}
-            className="h-1 bg-white/10 rounded"
-            style={{
-              animation: `textFade 3s ease-in-out ${i * 0.2}s infinite`
-            }}
+            className="h-1 rounded"
+            style={{ backgroundColor: 'rgba(201, 60, 60, 0.3)' }}
           />
         ))}
       </div>
@@ -110,7 +108,7 @@ const TargetGauge = memo(() => {
         }}
       />
       <div
-        className="absolute inset-2 border-2 border-[#FFFFFF]/50 rounded-full"
+        className="absolute inset-2 border-2 border-[#C93C3C]/50 rounded-full"
         style={{
           animation: 'gaugePulse3 1.8s ease-in-out infinite'
         }}
@@ -147,7 +145,7 @@ const TargetGauge = memo(() => {
           }}
         >
           <div 
-            className="absolute w-1 h-1 bg-[#FFFFFF] rounded-full"
+            className="absolute w-1 h-1 bg-[#C93C3C] rounded-full"
             style={{
               top: '50%',
               left: '50%',
@@ -168,10 +166,10 @@ const CodeAnimation = memo(() => {
     { text: 'Sampling(ayers.Layer):', color: 'text-[#C93C3C]', width: 85, delay: 0 },
     { text: '"""Uses mean, log_var to sample z..."""', color: 'text-gray-500', width: 95, delay: 0.6 },
     { text: '', color: '', width: 0, delay: 0 },
-    { text: 'call(self, inputs):', color: 'text-blue-400', width: 70, delay: 1.2 },
-    { text: '  mean, log_var = inputs', color: 'text-gray-700', width: 80, delay: 1.5 },
-    { text: '  batch = tf.shape(mean)[0]', color: 'text-gray-700', width: 85, delay: 1.8 },
-    { text: '  dim = tf.shape(mean)[1]', color: 'text-gray-700', width: 82, delay: 2.1 },
+    { text: 'call(self, inputs):', color: 'text-[#C93C3C]', width: 70, delay: 1.2 },
+    { text: '  mean, log_var = inputs', color: 'text-gray-600', width: 80, delay: 1.5 },
+    { text: '  batch = tf.shape(mean)[0]', color: 'text-gray-600', width: 85, delay: 1.8 },
+    { text: '  dim = tf.shape(mean)[1]', color: 'text-gray-600', width: 82, delay: 2.1 },
   ];
 
   return (
@@ -232,7 +230,7 @@ const CodeAnimation = memo(() => {
 
 CodeAnimation.displayName = 'CodeAnimation';
 
-// Status Panel - Simplified
+// Status Panel - Simplified with red theme
 const StatusPanel = memo(() => {
   const statuses = [
     { label: 'Security', icon: '🛡️' },
@@ -250,13 +248,13 @@ const StatusPanel = memo(() => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: index * 0.1 }}
           className={`flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-xs ${
-            index === 1 ? 'bg-white/20' : 'bg-white/5'
+            index === 1 ? 'bg-[#C93C3C]/20' : 'bg-[#C93C3C]/10'
           }`}
         >
-          <div className="w-6 h-6 flex items-center justify-center bg-white/10 rounded">
+          <div className="w-6 h-6 flex items-center justify-center bg-[#C93C3C]/20 rounded">
             <span className="text-[10px]">{status.icon}</span>
           </div>
-          <span className="text-gray-900/70">{status.label}</span>
+          <span className="text-gray-700">{status.label}</span>
         </motion.div>
       ))}
     </div>
@@ -284,7 +282,7 @@ const UpdatingStatus = memo(() => {
             cy="50"
             r="45"
             fill="none"
-            stroke="rgba(216, 66, 14, 0.5)"
+            stroke="rgba(201, 60, 60, 0.3)"
             strokeWidth="8"
           />
           <circle
@@ -292,14 +290,14 @@ const UpdatingStatus = memo(() => {
             cy="50"
             r="45"
             fill="none"
-            stroke="rgb(216, 66, 14)"
+            stroke="#C93C3C"
             strokeWidth="8"
             strokeDasharray="70 210"
             strokeLinecap="round"
           />
         </svg>
       </motion.div>
-      <p className="text-xs text-gray-900/70">Updating...</p>
+      <p className="text-xs text-gray-600">Updating...</p>
     </div>
   );
 });
@@ -324,16 +322,16 @@ const ProcessCard = memo(({ step, index, isInView }: any) => {
         onHoverEnd={() => setIsHovered(false)}
         className="rounded-3xl p-8 h-full flex flex-col relative overflow-hidden border"
         style={{
-          backgroundColor: 'rgba(255, 255, 255, 0.05)',
-          borderColor: 'rgba(255, 255, 255, 0.1)'
+          backgroundColor: 'rgba(201, 60, 60, 0.05)',
+          borderColor: 'rgba(201, 60, 60, 0.2)'
         }}
       >
-        {/* Simplified hover effect - only opacity for performance */}
+        {/* Simplified hover effect - only opacity */}
         {isHovered && (
           <div
             className="absolute inset-0 z-0 opacity-20"
             style={{
-              background: 'radial-gradient(circle at center, rgba(13, 37, 86, 0.6) 0%, transparent 60%)',
+              background: 'radial-gradient(circle at center, rgba(201, 60, 60, 0.4) 0%, transparent 60%)',
             }}
           />
         )}
@@ -351,7 +349,7 @@ const ProcessCard = memo(({ step, index, isInView }: any) => {
             <h3 
               className="text-2xl font-bold mb-4 transition-colors"
               style={{
-                color: isHovered ? '#C93C3C' : '#FFFFFF',
+                color: isHovered ? '#C93C3C' : '#1f2937',
                 fontFamily: "'Outfit', sans-serif"
               }}
             >
@@ -360,7 +358,7 @@ const ProcessCard = memo(({ step, index, isInView }: any) => {
             <p 
               className="leading-relaxed font-light"
               style={{
-                color: 'rgba(255, 255, 255, 0.7)',
+                color: '#4b5563',
                 fontFamily: "'Outfit', sans-serif"
               }}
             >
@@ -383,8 +381,8 @@ export default function Process() {
   const steps = [
     {
       number: '01',
-      title: 'Discovery & Analysis',
-      description: 'We dive deep into your needs, exploring ideas and defining strategies for long-term success.',
+      title: t('step1.title'),
+      description: t('step1.description'),
       component: (
         <MacWindow className="h-[180px]">
           <div className="flex gap-3 h-full items-center">
@@ -400,8 +398,8 @@ export default function Process() {
     },
     {
       number: '02',
-      title: 'Development & Test',
-      description: 'We craft tailored solutions for your goals and rigorously test them for top-notch reliability.',
+      title: t('step2.title'),
+      description: t('step2.description'),
       component: (
         <MacWindow className="h-[180px]">
           <CodeAnimation />
@@ -410,8 +408,8 @@ export default function Process() {
     },
     {
       number: '03',
-      title: 'Launch & Maintain',
-      description: 'We deploy your solution seamlessly and ensure its continued performance with ongoing care.',
+      title: t('step3.title'),
+      description: t('step3.description'),
       component: (
         <MacWindow className="h-[180px]">
           <div className="grid grid-cols-2 gap-3 h-full">
@@ -448,8 +446,8 @@ export default function Process() {
             style={{
               color: '#C93C3C',
               fontFamily: "'Outfit', sans-serif",
-              backgroundColor: 'rgba(216, 66, 14, 0.1)',
-              border: '1px solid rgba(216, 66, 14, 0.2)'
+              backgroundColor: 'rgba(201, 60, 60, 0.1)',
+              border: '1px solid rgba(201, 60, 60, 0.2)'
             }}
           >
             {t('badge')}
@@ -458,22 +456,17 @@ export default function Process() {
             id="process-heading"
             className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
             style={{
-              color: '#FFFFFF',
+              color: '#1f2937',
               letterSpacing: '-0.04em',
               fontFamily: "'Outfit', sans-serif"
             }}
           >
-            {t('title')} <span style={{
-              background: 'linear-gradient(135deg, #C93C3C 0%, #F06666 50%, #FFFFFF 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}>{t('titleHighlight')}</span>
+            {t('title')} <span className="gradient-text">{t('titleHighlight')}</span>
           </h2>
           <p 
             className="text-xl sm:text-2xl max-w-3xl mx-auto font-light leading-8"
             style={{
-              color: 'rgba(255, 255, 255, 0.7)',
+              color: '#4b5563',
               fontFamily: "'Outfit', sans-serif"
             }}
           >
@@ -502,9 +495,9 @@ export default function Process() {
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
-              className="px-8 py-4 rounded-full font-semibold text-gray-900 transition-all duration-300 shadow-2xl"
+              className="px-8 py-4 rounded-full font-semibold text-white transition-all duration-300 shadow-2xl shadow-[#C93C3C]/30"
               style={{
-                background: 'linear-gradient(135deg, #C93C3C 0%, #FFFFFF 100%)',
+                background: '#C93C3C',
                 fontFamily: "'Outfit', sans-serif"
               }}
             >

@@ -28,7 +28,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer ref={ref} className="relative py-20 overflow-hidden border-t" style={{ borderColor: 'rgba(13, 37, 86, 0.3)' }}>
+    <footer ref={ref} className="relative py-20 overflow-hidden border-t" style={{ borderColor: 'rgba(201, 60, 60, 0.2)', backgroundColor: '#FFFFFF' }}>
       
       <div className="relative z-10 section-container">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-12">
@@ -39,19 +39,24 @@ export default function Footer() {
             className="lg:col-span-2"
           >
             <Link href="/" className="flex items-center gap-3 mb-6 group w-fit">
-              <div className="w-12 h-12 rounded-xl glass-effect glass-border flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform border"
+                style={{
+                  backgroundColor: 'rgba(201, 60, 60, 0.1)',
+                  borderColor: 'rgba(201, 60, 60, 0.2)'
+                }}
+              >
                 <span className="text-3xl">🐻</span>
               </div>
-              <span className="text-2xl font-bold text-gray-900 group-hover:text-indigo-300 transition-colors">
+              <span className="text-2xl font-bold transition-colors" style={{ color: '#1f2937' }}>
                 BAM
               </span>
             </Link>
 
-            <p className="text-gray-600 leading-relaxed mb-6 max-w-md">
+            <p className="leading-relaxed mb-6 max-w-md" style={{ color: '#4b5563' }}>
               {t('description')}
             </p>
 
-            <p className="text-gray-500 text-sm mb-8">
+            <p className="text-sm mb-8" style={{ color: '#6b7280' }}>
               📍 {t('location')}
             </p>
 
@@ -65,7 +70,11 @@ export default function Footer() {
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.9 }}
-                  className="w-12 h-12 glass-effect glass-border rounded-xl flex items-center justify-center hover:bg-[#C93C3C]/10 transition-all"
+                  className="w-12 h-12 rounded-xl flex items-center justify-center transition-all border"
+                  style={{
+                    backgroundColor: 'rgba(201, 60, 60, 0.1)',
+                    borderColor: 'rgba(201, 60, 60, 0.2)'
+                  }}
                   aria-label={social.label}
                 >
                   <span className="text-xl">{social.icon}</span>
@@ -79,7 +88,7 @@ export default function Footer() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h3 className="font-semibold text-lg text-gray-900 mb-6">
+            <h3 className="font-semibold text-lg mb-6" style={{ color: '#1f2937' }}>
               {t('quickLinks')}
             </h3>
             <ul className="space-y-3">
@@ -97,12 +106,14 @@ export default function Footer() {
                 >
                   <Link
                     href={link.href}
-                    className="text-gray-600 hover:text-[#C93C3C] transition-colors inline-flex items-center group"
+                    className="transition-colors inline-flex items-center group"
+                    style={{ color: '#4b5563' }}
                   >
                     <motion.span
                       initial={{ x: 0 }}
                       whileHover={{ x: 5 }}
-                      className="mr-2 text-[#C93C3C]"
+                      className="mr-2"
+                      style={{ color: '#C93C3C' }}
                     >
                       →
                     </motion.span>
@@ -118,10 +129,10 @@ export default function Footer() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="font-semibold text-lg text-gray-900 mb-4">
+            <h3 className="font-semibold text-lg mb-4" style={{ color: '#1f2937' }}>
               {t('newsletter.title')}
             </h3>
-            <p className="text-gray-600 text-sm mb-6">
+            <p className="text-sm mb-6" style={{ color: '#4b5563' }}>
               {t('newsletter.description')}
             </p>
             <form onSubmit={handleNewsletterSubmit} className="space-y-3">
@@ -130,14 +141,20 @@ export default function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t('newsletter.placeholder')}
-                className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C93C3C] transition-all text-sm"
+                className="w-full px-4 py-3 rounded-xl text-sm transition-all border focus:outline-none focus:ring-2 focus:ring-[#C93C3C]"
+                style={{
+                  backgroundColor: 'rgba(201, 60, 60, 0.05)',
+                  borderColor: 'rgba(201, 60, 60, 0.2)',
+                  color: '#1f2937'
+                }}
                 required
               />
               <motion.button
                 type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full btn-primary py-3 text-sm"
+                className="w-full py-3 text-sm rounded-full font-semibold text-white"
+                style={{ backgroundColor: '#C93C3C' }}
               >
                 {t('newsletter.subscribe')}
               </motion.button>
@@ -149,29 +166,30 @@ export default function Footer() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="pt-8 border-t border-white/5"
+          className="pt-8"
+          style={{ borderTop: '1px solid rgba(201, 60, 60, 0.2)' }}
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex flex-col md:flex-row items-center gap-4">
-              <p className="text-gray-500 text-sm">
+              <p className="text-sm" style={{ color: '#6b7280' }}>
                 © {new Date().getFullYear()} BAM. {t('rights')}
               </p>
               
               {/* Language Switcher in Footer */}
               <div className="flex items-center gap-4">
-                <span className="text-gray-500 text-sm hidden md:inline">|</span>
+                <span className="text-sm hidden md:inline" style={{ color: '#6b7280' }}>|</span>
                 <LanguageSwitcher />
               </div>
             </div>
 
             <div className="flex gap-6 text-sm">
-              <Link href="/privacy" className="text-gray-500 hover:text-[#C93C3C] transition-colors">
+              <Link href="/privacy" className="transition-colors" style={{ color: '#6b7280' }}>
                 {t('legal.privacy')}
               </Link>
-              <Link href="/terms" className="text-gray-500 hover:text-[#C93C3C] transition-colors">
+              <Link href="/terms" className="transition-colors" style={{ color: '#6b7280' }}>
                 {t('legal.terms')}
               </Link>
-              <Link href="/cookies" className="text-gray-500 hover:text-[#C93C3C] transition-colors">
+              <Link href="/cookies" className="transition-colors" style={{ color: '#6b7280' }}>
                 {t('legal.cookies')}
               </Link>
             </div>

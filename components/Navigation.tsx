@@ -20,12 +20,13 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Nav links now use translation keys
   const navLinks = [
-    { href: '#process', label: 'Process' },
-    { href: '#services', label: 'Services' },
-    { href: '#benefits', label: 'Benefits' },
-    { href: '#plans', label: 'Plans' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#process', labelKey: 'process' },
+    { href: '#services', labelKey: 'services' },
+    { href: '#benefits', labelKey: 'benefits' },
+    { href: '#plans', labelKey: 'plans' },
+    { href: '#contact', labelKey: 'contact' },
   ];
 
   return (
@@ -43,20 +44,24 @@ export default function Navigation() {
         }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
         className={`transition-all duration-300 w-full ${
-          scrolled ? 'backdrop-blur-xl bg-black/50' : 'backdrop-blur-md bg-black/30'
-        } border border-white/10 rounded-lg py-3 mx-4`}
+          scrolled ? 'backdrop-blur-xl' : 'backdrop-blur-md'
+        } rounded-lg py-3 mx-4 border`}
+        style={{
+          backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0.7)',
+          borderColor: 'rgba(201, 60, 60, 0.2)'
+        }}
       >
         <div className={`flex items-center transition-all duration-300 ${
           scrolled ? 'gap-8' : 'gap-16'
         }`}>
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
-            <div className="w-7 h-7 bg-white rounded-md flex items-center justify-center">
+            <div className="w-7 h-7 rounded-md flex items-center justify-center" style={{ backgroundColor: '#C93C3C' }}>
               <div className="grid grid-cols-2 gap-[2px] w-4 h-4">
-                <div className="bg-[#C93C3C] rounded-sm"></div>
-                <div className="bg-[#C93C3C] rounded-sm"></div>
-                <div className="bg-[#C93C3C] rounded-sm"></div>
-                <div className="bg-[#C93C3C] rounded-sm"></div>
+                <div className="bg-white rounded-sm"></div>
+                <div className="bg-white rounded-sm"></div>
+                <div className="bg-white rounded-sm"></div>
+                <div className="bg-white rounded-sm"></div>
               </div>
             </div>
           </Link>
@@ -74,11 +79,20 @@ export default function Navigation() {
               >
                 <a  
                   href={link.href}
-                  className={`py-2 text-sm text-gray-700 hover:text-gray-900 transition-all duration-300 rounded-md hover:bg-white/10 ${
+                  className={`py-2 text-sm transition-all duration-300 rounded-md ${
                     scrolled ? 'px-3' : 'px-6'
                   }`}
+                  style={{ color: '#374151' }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = '#C93C3C';
+                    e.currentTarget.style.backgroundColor = 'rgba(201, 60, 60, 0.1)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = '#374151';
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                  }}
                 >
-                  {link.label}
+                  {t(link.labelKey)}
                 </a>
               </motion.div>
             ))}
@@ -93,7 +107,10 @@ export default function Navigation() {
                 transition={{ duration: 0.3, delay: 0.5 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-4 py-2 bg-[#C93C3C] border border-white/10 text-gray-900 text-sm font-medium rounded-lg hover:bg-[#FFFFFF] hover:shadow-lg hover:shadow-[#C93C3C]/30 transition-all flex items-center gap-2"
+                className="px-4 py-2 text-sm font-medium rounded-lg transition-all flex items-center gap-2 text-white"
+                style={{
+                  backgroundColor: '#C93C3C'
+                }}
               >
                 <svg 
                   width="20" 
@@ -119,7 +136,8 @@ export default function Navigation() {
             transition={{ duration: 0.3, delay: 0.5 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden w-10 h-10 flex items-center justify-center text-gray-900 flex-shrink-0"
+            className="md:hidden w-10 h-10 flex items-center justify-center flex-shrink-0"
+            style={{ color: '#374151' }}
             aria-label="Toggle menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -138,7 +156,8 @@ export default function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-t border-white/5 mt-3 pt-3"
+            className="md:hidden mt-3 pt-3"
+            style={{ borderTop: '1px solid rgba(201, 60, 60, 0.2)' }}
           >
             <div className="space-y-2">
               {navLinks.map((link) => (
@@ -146,9 +165,10 @@ export default function Navigation() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block px-4 py-3 text-gray-600 hover:text-gray-900 hover:bg-white/5 rounded-lg transition-colors"
+                  className="block px-4 py-3 rounded-lg transition-colors"
+                  style={{ color: '#374151' }}
                 >
-                  {link.label}
+                  {t(link.labelKey)}
                 </a>
               ))}
             </div>

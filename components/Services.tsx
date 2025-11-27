@@ -98,8 +98,8 @@ const ServiceCard = memo(({ service, index, t }: { service: Service; index: numb
       variants={cardVariants}
       className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border"
       style={{
-        backgroundColor: 'rgba(255, 255, 255, 0.05)',
-        borderColor: 'rgba(255, 255, 255, 0.1)'
+        backgroundColor: 'rgba(201, 60, 60, 0.05)',
+        borderColor: 'rgba(201, 60, 60, 0.2)'
       }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
@@ -111,7 +111,7 @@ const ServiceCard = memo(({ service, index, t }: { service: Service; index: numb
         <div
           className="absolute inset-0 z-0 opacity-20"
           style={{
-            background: 'radial-gradient(circle at center, rgba(13, 37, 86, 0.6) 0%, transparent 60%)',
+            background: 'radial-gradient(circle at center, rgba(201, 60, 60, 0.4) 0%, transparent 60%)',
           }}
         />
       )}
@@ -121,13 +121,13 @@ const ServiceCard = memo(({ service, index, t }: { service: Service; index: numb
         <div className="flex justify-between items-start">
           <service.Icon 
             className="h-8 w-8" 
-            style={{ color: 'rgba(255, 255, 255, 0.8)' }}
+            style={{ color: '#C93C3C' }}
             aria-hidden="true" 
           />
           <span 
             className="text-xl font-medium"
             style={{
-              color: 'rgba(255, 255, 255, 0.15)',
+              color: 'rgba(201, 60, 60, 0.3)',
               fontFamily: "'Outfit', sans-serif"
             }}
           >
@@ -139,7 +139,7 @@ const ServiceCard = memo(({ service, index, t }: { service: Service; index: numb
             id={`service-title-${service.id}`} 
             className="text-2xl font-medium"
             style={{
-              color: '#FFFFFF',
+              color: '#1f2937',
               fontFamily: "'Outfit', sans-serif"
             }}
           >
@@ -149,7 +149,7 @@ const ServiceCard = memo(({ service, index, t }: { service: Service; index: numb
             id={`service-desc-${service.id}`} 
             className="mt-3 text-base font-light"
             style={{
-              color: 'rgba(255, 255, 255, 0.7)',
+              color: '#4b5563',
               fontFamily: "'Outfit', sans-serif"
             }}
           >
@@ -160,14 +160,14 @@ const ServiceCard = memo(({ service, index, t }: { service: Service; index: numb
           href="#contact" 
           className="mt-8 inline-flex items-center text-sm font-medium transition-colors duration-300"
           style={{
-            color: 'rgba(255, 255, 255, 0.7)',
+            color: '#C93C3C',
             fontFamily: "'Outfit', sans-serif"
           }}
           onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => {
-            e.currentTarget.style.color = '#FFFFFF';
+            e.currentTarget.style.color = '#a33030';
           }}
           onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => {
-            e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)';
+            e.currentTarget.style.color = '#C93C3C';
           }}
           aria-label={`${t('learnMore')} ${t(service.titleKey)}`}
         >
@@ -192,6 +192,7 @@ export default function Services() {
     <section
       id="services"
       className="py-20 sm:py-24 lg:py-32"
+      style={{ backgroundColor: '#FFFFFF' }}
       aria-labelledby="services-heading"
     >
       <motion.div
@@ -217,17 +218,17 @@ export default function Services() {
             id="services-heading"
             className="mt-6 text-4xl font-bold sm:text-5xl lg:text-6xl"
             style={{
-              color: '#FFFFFF',
+              color: '#1f2937',
               letterSpacing: '-0.04em',
               fontFamily: "'Outfit', sans-serif"
             }}
           >
-            {t('title')}
+            {t('title')} <span className="gradient-text">{t('titleHighlight')}</span>
           </h2>
           <p 
             className="mx-auto mt-6 max-w-2xl text-lg font-light leading-8"
             style={{
-              color: 'rgba(255, 255, 255, 0.7)',
+              color: '#4b5563',
               fontFamily: "'Outfit', sans-serif"
             }}
           >

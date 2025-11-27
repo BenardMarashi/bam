@@ -4,7 +4,10 @@
     "services": "Shërbimet",
     "about": "Rreth nesh",
     "contact": "Kontakti",
-    "getStarted": "Fillo tani"
+    "getStarted": "Fillo tani",
+    "process": "Procesi",
+    "benefits": "Përfitimet",
+    "plans": "Planet"
   },
   "Hero": {
     "badge": "Partner i Automatizimit me IA",
