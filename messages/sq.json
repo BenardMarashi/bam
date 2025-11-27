@@ -1,0 +1,277 @@
+{
+  "Navigation": {
+    "home": "Kryefaqja",
+    "services": "Shërbimet",
+    "about": "Rreth nesh",
+    "contact": "Kontakti",
+    "getStarted": "Fillo tani"
+  },
+  "Hero": {
+    "badge": "Partner i Automatizimit me IA",
+    "title": "Transformimi i proceseve me IA",
+    "subtitle": "automatizim i fuqishëm",
+    "description": "Ne ndihmojmë bizneset në Vjenë dhe rajonin DACH të rriten me e-commerce profesionale, aplikacione të personalizuara dhe zgjidhje me IA—me deri në 50% financim nga Vjena",
+    "exploreServices": "Eksploro Shërbimet",
+    "getStarted": "Fillo Tani",
+    "trustedBy": "Besuar nga"
+  },
+  "Process": {
+    "badge": "Procesi",
+    "title": "Rruga juaj drejt",
+    "titleHighlight": "përsosmërisë",
+    "subtitle": "Një qasje e thjeshtë dhe efektive për të ofruar ekselencë.",
+    "step1": {
+      "number": "01",
+      "title": "Zbulimi & Analiza",
+      "description": "Ne zhytemi thellë në nevojat tuaja, duke eksploruar ide dhe duke përcaktuar strategji për sukses afatgjatë."
+    },
+    "step2": {
+      "number": "02",
+      "title": "Zhvillimi & Testimi",
+      "description": "Ne krijojmë zgjidhje të përshtatura për qëllimet tuaja dhe i testojmë ato rigorozisht për besueshmëri maksimale."
+    },
+    "step3": {
+      "number": "03",
+      "title": "Lansimi & Mirëmbajtja",
+      "description": "Ne vendosim zgjidhjen tuaj pa probleme dhe sigurojmë performancën e saj të vazhdueshme me kujdes të vazhdueshëm."
+    },
+    "cta": "Filloni Udhëtimin Tuaj"
+  },
+  "Services": {
+    "badge": "Shërbimet",
+    "title": "Zgjidhje strategjike",
+    "titleHighlight": "për rritje",
+    "subtitle": "Transformim i plotë dixhital—nga e-commerce deri te automatizimi me IA.",
+    "learnMore": "Mëso më shumë",
+    "viewAll": "Shiko Të Gjitha Shërbimet",
+    "service1": {
+      "title": "Shopify E-Commerce",
+      "description": "Dyqane profesionale Shopify me dizajn premium, konfigurim pagesash dhe optimizim SEO. I përshtatshëm për financim nga Vjena—deri në 50% subvencion."
+    },
+    "service2": {
+      "title": "Aplikacione Web të Personalizuara",
+      "description": "Zgjidhje biznesi të personalizuara—platforma SaaS, sisteme rezervimesh, portale klientësh dhe mjete të brendshme të ndërtuara me teknologji moderne."
+    },
+    "service3": {
+      "title": "Automatizim Biznesi me IA",
+      "description": "Asistentë IA të personalizuar, të trajnuar me të dhënat tuaja për mbështetje klientësh, analizë dokumentesh dhe automatizim inteligjent të proceseve."
+    },
+    "service4": {
+      "title": "Marketing i Performancës",
+      "description": "Kampanja të drejtuara nga të dhënat në Google Ads dhe Meta me optimizim të vazhdueshëm, testim A/B dhe gjurmim ROI për të maksimizuar konvertimet."
+    },
+    "service5": {
+      "title": "SEO Teknik",
+      "description": "Auditime gjithëpërfshirëse SEO, optimizim i kërkimit lokal dhe monitorim i vazhdueshëm për të rritur dukshmërinë organike dhe trafik."
+    },
+    "service6": {
+      "title": "Optimizim E-Commerce",
+      "description": "Optimizim i vazhdueshëm i Shopify, përmirësim i normës së konvertimit, gjurmim analitik dhe monitorim i performancës për rritje të qëndrueshme."
+    }
+  },
+  "Benefits": {
+    "badge": "Përfitimet",
+    "title": "Maksimizoni efikasitetin",
+    "titleHighlight": "dhe ndikimin",
+    "subtitle": "Zbuloni përfitimet kryesore të partneritetit me ne.",
+    "benefit1": {
+      "title": "Reduktim i Kostove",
+      "description": "Optimizoni proceset e biznesit dhe racionalizoni operacionet për të minimizuar ndjeshëm kostot dhe për të maksimizuar efikasitetin e përgjithshëm.",
+      "stat": "40%",
+      "statLabel": "Kursime mesatare të kostove"
+    },
+    "benefit2": {
+      "title": "Rezultate të Përmirësuara",
+      "description": "Përdorni njohuri të fuqishme të bazuara në të dhëna dhe strategji inovative për të përmirësuar performancën e biznesit.",
+      "stat": "3x",
+      "statLabel": "Përmirësim i performancës"
+    },
+    "benefit3": {
+      "title": "Produktivitet i Rritur",
+      "description": "Përmirësoni performancën e ekipit duke automatizuar detyrat e përsëritura, duke rafinuar proceset dhe duke përshpejtuar funksionet e biznesit.",
+      "stat": "60%",
+      "statLabel": "Kohë e kursyer në detyra"
+    },
+    "stats": {
+      "projects": "Projekte të Përfunduara",
+      "satisfaction": "Kënaqësi Klientësh",
+      "team": "Anëtarë Ekipi",
+      "experience": "Vite Përvojë"
+    }
+  },
+  "Pricing": {
+    "badge": "Çmimet",
+    "title": "Plane fleksibël",
+    "titleHighlight": "për rritje",
+    "subtitle": "Zgjidhni planin perfekt për nevojat e biznesit tuaj.",
+    "popular": "Më i Popullarizuari",
+    "perMonth": "muaj",
+    "getStarted": "Fillo Tani",
+    "starter": {
+      "name": "Starter",
+      "price": "€450",
+      "description": "Perfekt për biznese të vogla që fillojnë me automatizim.",
+      "feature1": "Integrim i Chatbot IA",
+      "feature2": "Dashboard analitik bazë",
+      "feature3": "Mbështetje me email",
+      "feature4": "1 llogari përdoruesi",
+      "feature5": "5 workflow automatizimi"
+    },
+    "professional": {
+      "name": "Professional",
+      "price": "€950",
+      "description": "Ideal për biznese në rritje me kërkesa të avancuara.",
+      "feature1": "Gjithçka nga Starter",
+      "feature2": "Automatizim i avancuar me IA",
+      "feature3": "Integrime të personalizuara",
+      "feature4": "Mbështetje prioritare",
+      "feature5": "Deri në 5 llogari përdoruesish"
+    },
+    "business": {
+      "name": "Business",
+      "price": "€1,850",
+      "description": "Zgjidhje gjithëpërfshirëse për biznese të konsoliduara dhe ekipe më të mëdha.",
+      "feature1": "Gjithçka nga Professional",
+      "feature2": "Menaxher llogarie i dedikuar",
+      "feature3": "Analitikë & raportim i avancuar",
+      "feature4": "Trajnim i modelit IA të personalizuar",
+      "feature5": "Deri në 20 llogari përdoruesish"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Me porosi",
+      "description": "Zgjidhje të nivelit enterprise, të përshtatura për nevojat tuaja.",
+      "feature1": "Gjithçka nga Business",
+      "feature2": "Zgjidhje White-label",
+      "feature3": "Vendosje On-premise",
+      "feature4": "Garanci SLA",
+      "feature5": "Përdorues pa limit"
+    },
+    "note": "Të gjitha planet përfshijnë një provë falas 14-ditore. Keni nevojë për zgjidhje të personalizuar?",
+    "contactUs": "Na kontaktoni"
+  },
+  "Testimonials": {
+    "badge": "Dëshmi",
+    "title": "Besuar nga",
+    "titleHighlight": "klientë të kënaqur",
+    "subtitle": "Zbuloni si kemi nxitur rritjen dhe inovacionin.",
+    "socialProof": {
+      "clients": "Klientë të Kënaqur",
+      "rating": "Vlerësim Mesatar",
+      "satisfaction": "Normë Kënaqësie"
+    },
+    "testimonial1": {
+      "content": "Ata transformuan biznesin tonë të shitjes me pakicë me një dyqan profesional Shopify që rriti shitjet tona online me 250% në tremujorin e parë."
+    },
+    "testimonial2": {
+      "content": "Sistemi i personalizuar i rezervimeve që ndërtuan optimizoi të gjithë operacionin tonë. Tani trajtojmë 3x më shumë takime me të njëjtin personel."
+    },
+    "testimonial3": {
+      "content": "Chatbot-i i tyre me IA trajton 80% të pyetjeve të klientëve automatikisht, duke e liruar ekipin tonë të fokusohet në rastet komplekse dhe duke përmirësuar kënaqësinë."
+    },
+    "testimonial4": {
+      "content": "Udhëzimi për financimin e Vjenës ishte i paçmuar—morëm 50% të projektit tonë €15,000 si subvencion. Shërbim dhe ROI i jashtëzakonshëm."
+    }
+  },
+  "FAQ": {
+    "badge": "Pyetje të Shpeshta",
+    "title": "Pyesni çfarëdo që keni",
+    "titleHighlight": "në mendje",
+    "subtitle": "Pyetje të shpeshta të dizajnuara për të ofruar informacionin që ju nevojitet.",
+    "stillHaveQuestions": "Keni ende pyetje?",
+    "stillHaveQuestionsText": "Ekipi ynë është këtu për të ndihmuar. Na kontaktoni dhe do t'u përgjigjemi të gjitha pyetjeve tuaja.",
+    "contactUs": "Na Kontaktoni",
+    "questions": {
+      "q1": {
+        "question": "Çfarë shërbimesh ofroni?",
+        "answer": "Ne specializohemi në zhvillimin e e-commerce Shopify, aplikacione web të personalizuara, zgjidhje biznesi me fuqi IA, marketing të performancës, SEO teknik dhe shërbime optimizimi të vazhdueshme për bizneset në Vjenë dhe rajonin DACH."
+      },
+      "q2": {
+        "question": "Sa kohë zgjat një projekt tipik?",
+        "answer": "Një konfigurim e-commerce Shopify tipikisht zgjat 4-6 javë, aplikacionet web të personalizuara variojnë nga 8-16 javë, dhe zgjidhjet me IA marrin 6-12 javë varësisht nga kompleksiteti. Ne ofrojmë afate kohore të detajuara gjatë fazës së zbulimit."
+      },
+      "q3": {
+        "question": "A ofroni mbështetje të vazhdueshme pas lansimit?",
+        "answer": "Absolutisht! Ne ofrojmë paketa mujore gjithëpërfshirëse për SEO, marketing të performancës, optimizim e-commerce dhe menaxhim të modeleve IA për të siguruar që zgjidhja juaj vazhdon të japë rezultate."
+      },
+      "q4": {
+        "question": "Çfarë është avantazhi i financimit të Vjenës?",
+        "answer": "Bizneset me bazë në Vjenë mund të aksesojnë deri në 50% financim nga Wirtschaftsagentur Wien për projekte transformimi dixhital mbi €10,000. Ne ju ndihmojmë të navigoni procesin e aplikimit për të maksimizuar financimin tuaj—duke ulur efektivisht kostot tuaja përgjysmë."
+      },
+      "q5": {
+        "question": "A mund të integroheni me sistemet ekzistuese?",
+        "answer": "Po! Ne specializohemi në integrimin me CRM, portale pagesash, sisteme inventari, mjete marketingu dhe API të palëve të treta për të krijuar workflow pa probleme në të gjitha operacionet e biznesit tuaj."
+      },
+      "q6": {
+        "question": "Çfarë i bën zgjidhjet tuaja me IA të ndryshme?",
+        "answer": "Zgjidhjet tona me IA trajnohen me të dhënat specifike të biznesit tuaj, duke ofruar avantazhe konkurruese të vërteta. Ne ofrojmë si vendosje të bazuara në cloud AWS ashtu edhe on-premise bazuar në kërkesat tuaja të sigurisë dhe rregullatore."
+      }
+    }
+  },
+  "ContactCTA": {
+    "title": "Le të flasim për",
+    "titleHighlight": "hapin tuaj të radhës",
+    "subtitle": "Planifikoni një konsultim falas për të zbuluar si mund t'ju ndihmojmë të rriteni—dhe sa mund të kurseni me financimin e Vjenës.",
+    "emailLabel": "Na dërgoni email",
+    "phoneLabel": "Na telefononi",
+    "scheduleCTA": "Planifikoni një Thirrje",
+    "features": {
+      "consultation": "Konsultim Falas",
+      "response": "Përgjigje e Shpejtë",
+      "solutions": "Zgjidhje të Personalizuara"
+    }
+  },
+  "Contact": {
+    "title": "Le të Ndërtojmë Diçka të Madhe",
+    "subtitle": "Na kontaktoni për të diskutuar projektin tuaj dhe për të zbuluar si mund të ndihmojmë biznesin tuaj të rritet",
+    "form": {
+      "name": "Emri",
+      "email": "Email",
+      "company": "Kompania",
+      "phone": "Telefoni",
+      "service": "I interesuar për",
+      "message": "Detajet e Projektit",
+      "namePlaceholder": "Emri Mbiemri",
+      "emailPlaceholder": "emri@kompania.com",
+      "companyPlaceholder": "Kompania Juaj",
+      "phonePlaceholder": "+355 123 456789",
+      "messagePlaceholder": "Na tregoni për projektin, qëllimet dhe afatin kohor tuaj...",
+      "selectService": "Zgjidhni një shërbim",
+      "services": {
+        "shopify": "Shopify E-Commerce",
+        "webapp": "Aplikacion Web i Personalizuar",
+        "ai": "Automatizim Biznesi me IA",
+        "marketing": "Marketing i Performancës",
+        "seo": "SEO Teknik",
+        "optimization": "Optimizim E-Commerce"
+      },
+      "required": "*",
+      "submit": "Dërgo Mesazhin",
+      "sending": "Duke dërguar...",
+      "successMessage": "Faleminderit! Do t'ju kontaktojmë brenda 24 orëve.",
+      "errorMessage": "Dështoi dërgimi i mesazhit. Ju lutemi provoni përsëri ose na dërgoni email direkt."
+    },
+    "reachUs": "Ose na kontaktoni direkt:",
+    "email": "hello@bam.at",
+    "phone": "+43 (0) XXX XXX XXX"
+  },
+  "Footer": {
+    "description": "Partner dixhital me shërbim të plotë për NVM-të e orientuara drejt rritjes në Vjenë dhe rajonin DACH. Të specializuar në Shopify e-commerce, aplikacione web të personalizuara dhe zgjidhje me fuqi IA—me deri në 50% financim nga Vjena të disponueshëm.",
+    "location": "Me bazë në Vjenë, Austri",
+    "quickLinks": "Lidhje të Shpejta",
+    "services": "Shërbimet",
+    "contact": "Kontakti",
+    "newsletter": {
+      "title": "Qëndroni të përditësuar me buletinin tonë",
+      "description": "Merrni njohuritë, këshillat dhe përditësimet më të fundit direkt në inbox-in tuaj.",
+      "placeholder": "Vendosni email-in tuaj",
+      "subscribe": "Abonohu"
+    },
+    "rights": "Të gjitha të drejtat e rezervuara.",
+    "legal": {
+      "privacy": "Politika e Privatësisë",
+      "terms": "Kushtet e Shërbimit",
+      "cookies": "Politika e Cookies"
+    }
+  }
+}

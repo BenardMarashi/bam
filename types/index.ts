@@ -23,4 +23,4 @@ export interface NavItem {
   href: string;
 }
 
-export type Locale = 'en' | 'de';
+export type Locale = 'sq' | 'en';

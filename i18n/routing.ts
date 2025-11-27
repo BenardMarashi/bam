@@ -3,10 +3,10 @@ import { createNavigation } from 'next-intl/navigation';
 
 export const routing = defineRouting({
   // A list of all locales that are supported
-  locales: ['en', 'de'],
+  locales: ['sq', 'en'],
 
-  // Used when no locale matches
-  defaultLocale: 'en',
+  // Used when no locale matches - Albanian is now default
+  defaultLocale: 'sq',
 
   // Always prefix locale in URL
   localePrefix: 'always'
