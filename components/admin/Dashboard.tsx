@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { useAuth } from '@/contexts/AuthContext';
 import { useRouter } from '@/i18n/routing';
 import {
@@ -12,6 +13,7 @@ import {
 } from '@/lib/admin/firestore';
 
 export default function Dashboard() {
+  const t = useTranslations('Admin.dashboard');
   const { user, signOut } = useAuth();
   const router = useRouter();
   const [contacts, setContacts] = useState<ContactSubmission[]>([]);
@@ -60,7 +62,7 @@ export default function Dashboard() {
   };
 
   const handleDeleteContact = async (id: string) => {
-    if (confirm('Are you sure you want to delete this contact submission?')) {
+    if (confirm(t('submissions.confirmDelete'))) {
       try {
         console.log('🔵 Deleting contact:', id);
         await deleteContactSubmission(id);
@@ -68,7 +70,7 @@ export default function Dashboard() {
         console.log('✅ Contact deleted successfully');
       } catch (error) {
         console.error('❌ Error deleting contact:', error);
-        alert('Failed to delete contact. Please try again.');
+        alert(t('errors.deleteFailed'));
       }
     }
   };
@@ -81,14 +83,14 @@ export default function Dashboard() {
       console.log('✅ Contact marked as read');
     } catch (error) {
       console.error('❌ Error marking contact as read:', error);
-      alert('Failed to mark as read. Please try again.');
+      alert(t('errors.markReadFailed'));
     }
   };
 
   const formatDate = (date: Date | any) => {
     try {
       const dateObj = date instanceof Date ? date : date.toDate();
-      return dateObj.toLocaleDateString('en-US', {
+      return dateObj.toLocaleDateString('sq-AL', {
         year: 'numeric',
         month: 'short',
         day: 'numeric',
@@ -123,7 +125,7 @@ export default function Dashboard() {
                 <span className="text-2xl">🐻</span>
               </div>
               <div>
-                <h1 className="text-2xl font-bold" style={{ color: '#ffffff' }}>Admin Dashboard</h1>
+                <h1 className="text-2xl font-bold" style={{ color: '#ffffff' }}>{t('title')}</h1>
                 <p className="text-sm" style={{ color: '#9ca3af' }}>{user?.email}</p>
               </div>
             </div>
@@ -138,7 +140,7 @@ export default function Dashboard() {
                 color: '#ef4444'
               }}
             >
-              Sign Out
+              {t('signOut')}
             </motion.button>
           </div>
         </div>
@@ -158,7 +160,7 @@ export default function Dashboard() {
           >
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm mb-1" style={{ color: '#9ca3af' }}>Total Contacts</p>
+                <p className="text-sm mb-1" style={{ color: '#9ca3af' }}>{t('stats.totalContacts')}</p>
                 <p className="text-3xl font-bold" style={{ color: '#ffffff' }}>{contacts.length}</p>
               </div>
               <div 
@@ -169,7 +171,7 @@ export default function Dashboard() {
               </div>
             </div>
             {unreadContacts > 0 && (
-              <p className="text-sm mt-2" style={{ color: '#C93C3C' }}>{unreadContacts} unread</p>
+              <p className="text-sm mt-2" style={{ color: '#C93C3C' }}>{unreadContacts} {t('stats.unreadCount')}</p>
             )}
           </motion.div>
 
@@ -185,7 +187,7 @@ export default function Dashboard() {
           >
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm mb-1" style={{ color: '#9ca3af' }}>Read</p>
+                <p className="text-sm mb-1" style={{ color: '#9ca3af' }}>{t('stats.read')}</p>
                 <p className="text-3xl font-bold" style={{ color: '#ffffff' }}>{contacts.filter(c => c.read).length}</p>
               </div>
               <div 
@@ -209,7 +211,7 @@ export default function Dashboard() {
           >
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm mb-1" style={{ color: '#9ca3af' }}>Unread</p>
+                <p className="text-sm mb-1" style={{ color: '#9ca3af' }}>{t('stats.unread')}</p>
                 <p className="text-3xl font-bold" style={{ color: '#ffffff' }}>{unreadContacts}</p>
               </div>
               <div 
@@ -224,7 +226,7 @@ export default function Dashboard() {
 
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold" style={{ color: '#ffffff' }}>Contact Submissions</h2>
+          <h2 className="text-2xl font-bold" style={{ color: '#ffffff' }}>{t('submissions.title')}</h2>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -238,7 +240,7 @@ export default function Dashboard() {
             }}
           >
             {loading && <div className="w-4 h-4 border-2 border-[#C93C3C] border-t-transparent rounded-full animate-spin" />}
-            🔄 Refresh
+            🔄 {t('refresh')}
           </motion.button>
         </div>
 
@@ -255,10 +257,10 @@ export default function Dashboard() {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span>Error loading data: {error}</span>
+              <span>{t('errors.loadingData')} {error}</span>
             </div>
             <p className="mt-2 text-sm" style={{ color: '#fca5a5' }}>
-              Make sure your Firestore security rules allow authenticated reads. Go to Firebase Console → Firestore → Rules.
+              {t('errors.firestoreHint')}
             </p>
           </div>
         )}
@@ -267,7 +269,7 @@ export default function Dashboard() {
         {loading ? (
           <div className="text-center py-12">
             <div className="w-16 h-16 border-4 border-[#C93C3C] border-t-transparent rounded-full animate-spin mx-auto"></div>
-            <p className="mt-4" style={{ color: '#9ca3af' }}>Loading...</p>
+            <p className="mt-4" style={{ color: '#9ca3af' }}>{t('loading')}</p>
           </div>
         ) : (
           <div className="space-y-4">
@@ -279,8 +281,8 @@ export default function Dashboard() {
                   border: '1px solid rgba(201, 60, 60, 0.2)'
                 }}
               >
-                <p className="text-lg" style={{ color: '#9ca3af' }}>No contact submissions yet</p>
-                <p className="text-sm mt-2" style={{ color: '#6b7280' }}>Submissions will appear here when users fill out the contact form</p>
+                <p className="text-lg" style={{ color: '#9ca3af' }}>{t('submissions.noSubmissions')}</p>
+                <p className="text-sm mt-2" style={{ color: '#6b7280' }}>{t('submissions.noSubmissionsDesc')}</p>
                 <button
                   onClick={loadData}
                   className="mt-4 px-6 py-2 rounded-xl font-semibold"
@@ -289,7 +291,7 @@ export default function Dashboard() {
                     color: '#ffffff'
                   }}
                 >
-                  Check for New Submissions
+                  {t('submissions.checkNew')}
                 </button>
               </div>
             ) : (
@@ -316,7 +318,7 @@ export default function Dashboard() {
                               color: '#ff6b6b'
                             }}
                           >
-                            NEW
+                            {t('submissions.new')}
                           </span>
                         )}
                         <span className="text-sm" style={{ color: '#9ca3af' }}>
@@ -326,32 +328,32 @@ export default function Dashboard() {
                       <h3 className="text-xl font-bold mb-2" style={{ color: '#ffffff' }}>{contact.name}</h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4 text-sm">
                         <div>
-                          <span style={{ color: '#9ca3af' }}>Email:</span>
+                          <span style={{ color: '#9ca3af' }}>{t('submissions.email')}</span>
                           <a href={`mailto:${contact.email}`} className="ml-2 hover:underline" style={{ color: '#C93C3C' }}>
                             {contact.email}
                           </a>
                         </div>
                         {contact.company && (
                           <div>
-                            <span style={{ color: '#9ca3af' }}>Company:</span>
+                            <span style={{ color: '#9ca3af' }}>{t('submissions.company')}</span>
                             <span className="ml-2" style={{ color: '#ffffff' }}>{contact.company}</span>
                           </div>
                         )}
                         {contact.phone && (
                           <div>
-                            <span style={{ color: '#9ca3af' }}>Phone:</span>
+                            <span style={{ color: '#9ca3af' }}>{t('submissions.phone')}</span>
                             <a href={`tel:${contact.phone}`} className="ml-2 hover:underline" style={{ color: '#C93C3C' }}>
                               {contact.phone}
                             </a>
                           </div>
                         )}
                         <div>
-                          <span style={{ color: '#9ca3af' }}>Service:</span>
-                          <span className="ml-2" style={{ color: '#ffffff' }}>{contact.service || 'Not specified'}</span>
+                          <span style={{ color: '#9ca3af' }}>{t('submissions.service')}</span>
+                          <span className="ml-2" style={{ color: '#ffffff' }}>{contact.service || t('submissions.notSpecified')}</span>
                         </div>
                       </div>
                       <div>
-                        <p className="text-sm mb-2" style={{ color: '#9ca3af' }}>Message:</p>
+                        <p className="text-sm mb-2" style={{ color: '#9ca3af' }}>{t('submissions.message')}</p>
                         <p className="leading-relaxed" style={{ color: '#e5e7eb' }}>{contact.message}</p>
                       </div>
                     </div>
@@ -366,7 +368,7 @@ export default function Dashboard() {
                             color: '#22c55e'
                           }}
                         >
-                          Mark Read
+                          {t('submissions.markRead')}
                         </button>
                       )}
                       <button
@@ -378,7 +380,7 @@ export default function Dashboard() {
                           color: '#ef4444'
                         }}
                       >
-                        Delete
+                        {t('submissions.delete')}
                       </button>
                     </div>
                   </div>

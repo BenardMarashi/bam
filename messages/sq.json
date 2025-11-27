@@ -276,5 +276,52 @@
       "terms": "Kushtet e Shërbimit",
       "cookies": "Politika e Cookies"
     }
+  },
+  "Admin": {
+    "login": {
+      "title": "Hyrje Admin",
+      "subtitle": "Hyni për të aksesuar panelin",
+      "email": "Email",
+      "emailPlaceholder": "admin@bam.al",
+      "password": "Fjalëkalimi",
+      "passwordPlaceholder": "••••••••",
+      "signIn": "Hyr",
+      "signingIn": "Duke hyrë...",
+      "error": "Email ose fjalëkalim i pavlefshëm"
+    },
+    "dashboard": {
+      "title": "Paneli i Administratorit",
+      "signOut": "Dil",
+      "loading": "Duke ngarkuar...",
+      "refresh": "Rifresko",
+      "stats": {
+        "totalContacts": "Kontakte Totale",
+        "read": "Të Lexuara",
+        "unread": "Të Palexuara",
+        "unreadCount": "të palexuara"
+      },
+      "submissions": {
+        "title": "Dorëzimet e Kontaktit",
+        "noSubmissions": "Asnjë dorëzim kontakti ende",
+        "noSubmissionsDesc": "Dorëzimet do të shfaqen këtu kur përdoruesit plotësojnë formularin e kontaktit",
+        "checkNew": "Kontrollo për Dorëzime të Reja",
+        "new": "I RI",
+        "email": "Email:",
+        "company": "Kompania:",
+        "phone": "Telefoni:",
+        "service": "Shërbimi:",
+        "notSpecified": "I paspecifikuar",
+        "message": "Mesazhi:",
+        "markRead": "Shëno si të Lexuar",
+        "delete": "Fshi",
+        "confirmDelete": "Jeni i sigurt që doni ta fshini këtë dorëzim kontakti?"
+      },
+      "errors": {
+        "loadingData": "Gabim në ngarkimin e të dhënave:",
+        "firestoreHint": "Sigurohuni që rregullat e sigurisë së Firestore lejojnë lexime të vërtetuara. Shkoni te Firebase Console → Firestore → Rules.",
+        "deleteFailed": "Dështoi fshirja e kontaktit. Ju lutemi provoni përsëri.",
+        "markReadFailed": "Dështoi shënimi si i lexuar. Ju lutemi provoni përsëri."
+      }
+    }
   }
 }

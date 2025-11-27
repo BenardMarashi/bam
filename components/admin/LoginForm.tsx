@@ -2,10 +2,12 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { useAuth } from '@/contexts/AuthContext';
 import { useRouter } from '@/i18n/routing';
 
 export default function LoginForm() {
+  const t = useTranslations('Admin.login');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -22,7 +24,7 @@ export default function LoginForm() {
       await signIn(email, password);
       router.push('/admin');
     } catch (err) {
-      setError('Invalid email or password');
+      setError(t('error'));
     } finally {
       setLoading(false);
     }
@@ -49,8 +51,8 @@ export default function LoginForm() {
           >
             <span className="text-3xl">🐻</span>
           </div>
-          <h1 className="text-3xl font-bold mb-2" style={{ color: '#ffffff' }}>Admin Login</h1>
-          <p style={{ color: '#9ca3af' }}>Sign in to access the dashboard</p>
+          <h1 className="text-3xl font-bold mb-2" style={{ color: '#ffffff' }}>{t('title')}</h1>
+          <p style={{ color: '#9ca3af' }}>{t('subtitle')}</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -68,49 +70,49 @@ export default function LoginForm() {
           )}
 
           <div>
-            <label className="block text-sm font-medium mb-2" style={{ color: '#e5e7eb' }}>Email</label>
+            <label className="block text-sm font-medium mb-2" style={{ color: '#e5e7eb' }}>{t('email')}</label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 transition-all"
+              className="w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#C93C3C] transition-all"
               style={{ 
                 backgroundColor: 'rgba(255, 255, 255, 0.1)',
                 border: '1px solid rgba(255, 255, 255, 0.2)',
                 color: '#ffffff'
               }}
-              placeholder="admin@bam.at"
+              placeholder={t('emailPlaceholder')}
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2" style={{ color: '#e5e7eb' }}>Password</label>
+            <label className="block text-sm font-medium mb-2" style={{ color: '#e5e7eb' }}>{t('password')}</label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 transition-all"
+              className="w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#C93C3C] transition-all"
               style={{ 
                 backgroundColor: 'rgba(255, 255, 255, 0.1)',
                 border: '1px solid rgba(255, 255, 255, 0.2)',
                 color: '#ffffff'
               }}
-              placeholder="••••••••"
+              placeholder={t('passwordPlaceholder')}
             />
           </div>
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-4 text-lg font-semibold rounded-xl disabled:opacity-50 transition-all"
+            className="w-full py-4 text-lg font-semibold rounded-xl disabled:opacity-50 transition-all hover:opacity-90"
             style={{ 
               backgroundColor: '#C93C3C',
               color: '#ffffff'
             }}
           >
-            {loading ? 'Signing in...' : 'Sign In'}
+            {loading ? t('signingIn') : t('signIn')}
           </button>
         </form>
       </motion.div>
