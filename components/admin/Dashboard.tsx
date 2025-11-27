@@ -87,7 +87,6 @@ export default function Dashboard() {
 
   const formatDate = (date: Date | any) => {
     try {
-      // Handle both Firestore Timestamp and Date objects
       const dateObj = date instanceof Date ? date : date.toDate();
       return dateObj.toLocaleDateString('en-US', {
         year: 'numeric',
@@ -105,25 +104,39 @@ export default function Dashboard() {
   const unreadContacts = contacts.filter(c => !c.read).length;
 
   return (
-    <div className="min-h-screen bg-black text-gray-900">
+    <div className="min-h-screen" style={{ backgroundColor: '#0f0f0f' }}>
       {/* Header */}
-      <div className="glass-effect glass-border border-b">
+      <div 
+        className="border-b"
+        style={{ 
+          backgroundColor: 'rgba(201, 60, 60, 0.1)',
+          borderColor: 'rgba(201, 60, 60, 0.3)'
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#C93C3C] to-[#C93C3C] rounded-xl flex items-center justify-center">
+              <div 
+                className="w-12 h-12 rounded-xl flex items-center justify-center"
+                style={{ backgroundColor: '#C93C3C' }}
+              >
                 <span className="text-2xl">🐻</span>
               </div>
               <div>
-                <h1 className="text-2xl font-bold">Admin Dashboard</h1>
-                <p className="text-sm text-gray-600">{user?.email}</p>
+                <h1 className="text-2xl font-bold" style={{ color: '#ffffff' }}>Admin Dashboard</h1>
+                <p className="text-sm" style={{ color: '#9ca3af' }}>{user?.email}</p>
               </div>
             </div>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleSignOut}
-              className="px-6 py-2 glass-effect glass-border rounded-xl hover:bg-red-500/10 text-red-400 transition-colors"
+              className="px-6 py-2 rounded-xl transition-colors"
+              style={{ 
+                backgroundColor: 'rgba(239, 68, 68, 0.2)',
+                border: '1px solid rgba(239, 68, 68, 0.5)',
+                color: '#ef4444'
+              }}
             >
               Sign Out
             </motion.button>
@@ -137,19 +150,26 @@ export default function Dashboard() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="glass-effect glass-border rounded-2xl p-6"
+            className="rounded-2xl p-6"
+            style={{ 
+              backgroundColor: 'rgba(201, 60, 60, 0.1)',
+              border: '1px solid rgba(201, 60, 60, 0.3)'
+            }}
           >
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-gray-600 text-sm mb-1">Total Contacts</p>
-                <p className="text-3xl font-bold">{contacts.length}</p>
+                <p className="text-sm mb-1" style={{ color: '#9ca3af' }}>Total Contacts</p>
+                <p className="text-3xl font-bold" style={{ color: '#ffffff' }}>{contacts.length}</p>
               </div>
-              <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center">
+              <div 
+                className="w-12 h-12 rounded-xl flex items-center justify-center"
+                style={{ backgroundColor: 'rgba(59, 130, 246, 0.2)' }}
+              >
                 <span className="text-2xl">📧</span>
               </div>
             </div>
             {unreadContacts > 0 && (
-              <p className="text-sm text-[#C93C3C] mt-2">{unreadContacts} unread</p>
+              <p className="text-sm mt-2" style={{ color: '#C93C3C' }}>{unreadContacts} unread</p>
             )}
           </motion.div>
 
@@ -157,14 +177,21 @@ export default function Dashboard() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="glass-effect glass-border rounded-2xl p-6"
+            className="rounded-2xl p-6"
+            style={{ 
+              backgroundColor: 'rgba(34, 197, 94, 0.1)',
+              border: '1px solid rgba(34, 197, 94, 0.3)'
+            }}
           >
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-gray-600 text-sm mb-1">Read</p>
-                <p className="text-3xl font-bold">{contacts.filter(c => c.read).length}</p>
+                <p className="text-sm mb-1" style={{ color: '#9ca3af' }}>Read</p>
+                <p className="text-3xl font-bold" style={{ color: '#ffffff' }}>{contacts.filter(c => c.read).length}</p>
               </div>
-              <div className="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center">
+              <div 
+                className="w-12 h-12 rounded-xl flex items-center justify-center"
+                style={{ backgroundColor: 'rgba(34, 197, 94, 0.2)' }}
+              >
                 <span className="text-2xl">✓</span>
               </div>
             </div>
@@ -174,14 +201,21 @@ export default function Dashboard() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="glass-effect glass-border rounded-2xl p-6"
+            className="rounded-2xl p-6"
+            style={{ 
+              backgroundColor: 'rgba(168, 85, 247, 0.1)',
+              border: '1px solid rgba(168, 85, 247, 0.3)'
+            }}
           >
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-gray-600 text-sm mb-1">Unread</p>
-                <p className="text-3xl font-bold">{unreadContacts}</p>
+                <p className="text-sm mb-1" style={{ color: '#9ca3af' }}>Unread</p>
+                <p className="text-3xl font-bold" style={{ color: '#ffffff' }}>{unreadContacts}</p>
               </div>
-              <div className="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center">
+              <div 
+                className="w-12 h-12 rounded-xl flex items-center justify-center"
+                style={{ backgroundColor: 'rgba(168, 85, 247, 0.2)' }}
+              >
                 <span className="text-2xl">🔔</span>
               </div>
             </div>
@@ -190,13 +224,18 @@ export default function Dashboard() {
 
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold">Contact Submissions</h2>
+          <h2 className="text-2xl font-bold" style={{ color: '#ffffff' }}>Contact Submissions</h2>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={loadData}
             disabled={loading}
-            className="px-4 py-2 glass-effect glass-border rounded-xl hover:bg-white/5 transition-colors disabled:opacity-50 flex items-center gap-2"
+            className="px-4 py-2 rounded-xl transition-colors disabled:opacity-50 flex items-center gap-2"
+            style={{ 
+              backgroundColor: 'rgba(201, 60, 60, 0.2)',
+              border: '1px solid rgba(201, 60, 60, 0.5)',
+              color: '#ffffff'
+            }}
           >
             {loading && <div className="w-4 h-4 border-2 border-[#C93C3C] border-t-transparent rounded-full animate-spin" />}
             🔄 Refresh
@@ -205,13 +244,22 @@ export default function Dashboard() {
 
         {/* Error Message */}
         {error && (
-          <div className="mb-6 p-4 glass-effect glass-border rounded-xl bg-red-500/10 border-red-500/20">
-            <div className="flex items-center gap-2 text-red-400">
+          <div 
+            className="mb-6 p-4 rounded-xl"
+            style={{ 
+              backgroundColor: 'rgba(239, 68, 68, 0.1)',
+              border: '1px solid rgba(239, 68, 68, 0.3)'
+            }}
+          >
+            <div className="flex items-center gap-2" style={{ color: '#ef4444' }}>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span>Error loading data: {error}</span>
             </div>
+            <p className="mt-2 text-sm" style={{ color: '#fca5a5' }}>
+              Make sure your Firestore security rules allow authenticated reads. Go to Firebase Console → Firestore → Rules.
+            </p>
           </div>
         )}
 
@@ -219,17 +267,27 @@ export default function Dashboard() {
         {loading ? (
           <div className="text-center py-12">
             <div className="w-16 h-16 border-4 border-[#C93C3C] border-t-transparent rounded-full animate-spin mx-auto"></div>
-            <p className="text-gray-600 mt-4">Loading...</p>
+            <p className="mt-4" style={{ color: '#9ca3af' }}>Loading...</p>
           </div>
         ) : (
           <div className="space-y-4">
             {contacts.length === 0 ? (
-              <div className="glass-effect glass-border rounded-2xl p-12 text-center">
-                <p className="text-gray-600 text-lg">No contact submissions yet</p>
-                <p className="text-gray-500 text-sm mt-2">Submissions will appear here when users fill out the contact form</p>
+              <div 
+                className="rounded-2xl p-12 text-center"
+                style={{ 
+                  backgroundColor: 'rgba(201, 60, 60, 0.05)',
+                  border: '1px solid rgba(201, 60, 60, 0.2)'
+                }}
+              >
+                <p className="text-lg" style={{ color: '#9ca3af' }}>No contact submissions yet</p>
+                <p className="text-sm mt-2" style={{ color: '#6b7280' }}>Submissions will appear here when users fill out the contact form</p>
                 <button
                   onClick={loadData}
-                  className="mt-4 px-6 py-2 btn-primary"
+                  className="mt-4 px-6 py-2 rounded-xl font-semibold"
+                  style={{ 
+                    backgroundColor: '#C93C3C',
+                    color: '#ffffff'
+                  }}
                 >
                   Check for New Submissions
                 </button>
@@ -241,66 +299,84 @@ export default function Dashboard() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05 }}
-                  className={`glass-effect glass-border rounded-2xl p-6 hover:bg-white/5 transition-all ${
-                    !contact.read ? 'border-[#C93C3C] bg-[#C93C3C]/5' : ''
-                  }`}
+                  className="rounded-2xl p-6 transition-all"
+                  style={{ 
+                    backgroundColor: !contact.read ? 'rgba(201, 60, 60, 0.1)' : 'rgba(255, 255, 255, 0.05)',
+                    border: !contact.read ? '1px solid rgba(201, 60, 60, 0.5)' : '1px solid rgba(255, 255, 255, 0.1)'
+                  }}
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-3">
                         {!contact.read && (
-                          <span className="px-2 py-1 bg-[#C93C3C]/20 text-[#C93C3C] text-xs font-semibold rounded">
+                          <span 
+                            className="px-2 py-1 text-xs font-semibold rounded"
+                            style={{ 
+                              backgroundColor: 'rgba(201, 60, 60, 0.3)',
+                              color: '#ff6b6b'
+                            }}
+                          >
                             NEW
                           </span>
                         )}
-                        <span className="text-gray-600 text-sm">
+                        <span className="text-sm" style={{ color: '#9ca3af' }}>
                           {formatDate(contact.timestamp)}
                         </span>
                       </div>
-                      <h3 className="text-xl font-bold mb-2">{contact.name}</h3>
+                      <h3 className="text-xl font-bold mb-2" style={{ color: '#ffffff' }}>{contact.name}</h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4 text-sm">
                         <div>
-                          <span className="text-gray-600">Email:</span>
-                          <a href={`mailto:${contact.email}`} className="ml-2 text-[#C93C3C] hover:underline">
+                          <span style={{ color: '#9ca3af' }}>Email:</span>
+                          <a href={`mailto:${contact.email}`} className="ml-2 hover:underline" style={{ color: '#C93C3C' }}>
                             {contact.email}
                           </a>
                         </div>
                         {contact.company && (
                           <div>
-                            <span className="text-gray-600">Company:</span>
-                            <span className="ml-2 text-gray-900">{contact.company}</span>
+                            <span style={{ color: '#9ca3af' }}>Company:</span>
+                            <span className="ml-2" style={{ color: '#ffffff' }}>{contact.company}</span>
                           </div>
                         )}
                         {contact.phone && (
                           <div>
-                            <span className="text-gray-600">Phone:</span>
-                            <a href={`tel:${contact.phone}`} className="ml-2 text-[#C93C3C] hover:underline">
+                            <span style={{ color: '#9ca3af' }}>Phone:</span>
+                            <a href={`tel:${contact.phone}`} className="ml-2 hover:underline" style={{ color: '#C93C3C' }}>
                               {contact.phone}
                             </a>
                           </div>
                         )}
                         <div>
-                          <span className="text-gray-600">Service:</span>
-                          <span className="ml-2 text-gray-900">{contact.service || 'Not specified'}</span>
+                          <span style={{ color: '#9ca3af' }}>Service:</span>
+                          <span className="ml-2" style={{ color: '#ffffff' }}>{contact.service || 'Not specified'}</span>
                         </div>
                       </div>
                       <div>
-                        <p className="text-gray-600 text-sm mb-2">Message:</p>
-                        <p className="text-gray-900 leading-relaxed">{contact.message}</p>
+                        <p className="text-sm mb-2" style={{ color: '#9ca3af' }}>Message:</p>
+                        <p className="leading-relaxed" style={{ color: '#e5e7eb' }}>{contact.message}</p>
                       </div>
                     </div>
                     <div className="flex flex-col gap-2">
                       {!contact.read && (
                         <button
                           onClick={() => handleMarkContactRead(contact.id!)}
-                          className="px-4 py-2 bg-[#C93C3C]/20 text-[#C93C3C] text-sm rounded-lg hover:bg-[#C93C3C]/30 transition-colors whitespace-nowrap"
+                          className="px-4 py-2 text-sm rounded-lg transition-colors whitespace-nowrap"
+                          style={{ 
+                            backgroundColor: 'rgba(34, 197, 94, 0.2)',
+                            border: '1px solid rgba(34, 197, 94, 0.5)',
+                            color: '#22c55e'
+                          }}
                         >
                           Mark Read
                         </button>
                       )}
                       <button
                         onClick={() => handleDeleteContact(contact.id!)}
-                        className="px-4 py-2 bg-red-500/20 text-red-400 text-sm rounded-lg hover:bg-red-500/30 transition-colors"
+                        className="px-4 py-2 text-sm rounded-lg transition-colors"
+                        style={{ 
+                          backgroundColor: 'rgba(239, 68, 68, 0.2)',
+                          border: '1px solid rgba(239, 68, 68, 0.5)',
+                          color: '#ef4444'
+                        }}
                       >
                         Delete
                       </button>

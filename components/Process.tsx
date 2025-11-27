@@ -495,11 +495,7 @@ export default function Process() {
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
-              className="px-8 py-4 rounded-full font-semibold text-white transition-all duration-300 shadow-2xl shadow-[#C93C3C]/30"
-              style={{
-                background: '#C93C3C',
-                fontFamily: "'Outfit', sans-serif"
-              }}
+              className="btn-primary text-lg shadow-2xl shadow-[#C93C3C]/30"
             >
               {t('cta')}
             </motion.button>

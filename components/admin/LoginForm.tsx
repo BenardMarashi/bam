@@ -29,47 +29,74 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black px-4">
+    <div 
+      className="min-h-screen flex items-center justify-center px-4"
+      style={{ backgroundColor: '#0f0f0f' }}
+    >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="w-full max-w-md glass-effect glass-border rounded-3xl p-8"
+        className="w-full max-w-md rounded-3xl p-8"
+        style={{ 
+          backgroundColor: 'rgba(201, 60, 60, 0.1)',
+          border: '1px solid rgba(201, 60, 60, 0.3)'
+        }}
       >
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-gradient-to-br from-[#C93C3C] to-[#C93C3C] rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <div 
+            className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4"
+            style={{ backgroundColor: '#C93C3C' }}
+          >
             <span className="text-3xl">🐻</span>
           </div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Admin Login</h1>
-          <p className="text-gray-600">Sign in to access the dashboard</p>
+          <h1 className="text-3xl font-bold mb-2" style={{ color: '#ffffff' }}>Admin Login</h1>
+          <p style={{ color: '#9ca3af' }}>Sign in to access the dashboard</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           {error && (
-            <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-red-400 text-sm">
+            <div 
+              className="p-4 rounded-xl text-sm"
+              style={{ 
+                backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                border: '1px solid rgba(239, 68, 68, 0.3)',
+                color: '#ef4444'
+              }}
+            >
               {error}
             </div>
           )}
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+            <label className="block text-sm font-medium mb-2" style={{ color: '#e5e7eb' }}>Email</label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C93C3C]"
+              className="w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 transition-all"
+              style={{ 
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                color: '#ffffff'
+              }}
               placeholder="admin@bam.at"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
+            <label className="block text-sm font-medium mb-2" style={{ color: '#e5e7eb' }}>Password</label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-4 py-3 glass-effect glass-border rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C93C3C]"
+              className="w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 transition-all"
+              style={{ 
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                color: '#ffffff'
+              }}
               placeholder="••••••••"
             />
           </div>
@@ -77,7 +104,11 @@ export default function LoginForm() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full btn-primary py-4 text-lg disabled:opacity-50"
+            className="w-full py-4 text-lg font-semibold rounded-xl disabled:opacity-50 transition-all"
+            style={{ 
+              backgroundColor: '#C93C3C',
+              color: '#ffffff'
+            }}
           >
             {loading ? 'Signing in...' : 'Sign In'}
           </button>

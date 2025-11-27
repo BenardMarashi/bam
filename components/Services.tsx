@@ -204,16 +204,17 @@ export default function Services() {
       >
         {/* Section Header */}
         <div className="text-center">
-          <p 
-            className="font-bold text-sm uppercase"
+          <span 
+            className="inline-block px-5 py-2 text-sm font-bold uppercase tracking-[0.2em] mb-6 rounded-lg"
             style={{
               color: '#C93C3C',
-              letterSpacing: '0.2em',
-              fontFamily: "'Outfit', sans-serif"
+              fontFamily: "'Outfit', sans-serif",
+              backgroundColor: 'rgba(201, 60, 60, 0.1)',
+              border: '1px solid rgba(201, 60, 60, 0.2)'
             }}
           >
             {t('badge')}
-          </p>
+          </span>
           <h2
             id="services-heading"
             className="mt-6 text-4xl font-bold sm:text-5xl lg:text-6xl"
